@@ -1,0 +1,455 @@
+maintenance_id,equipment_id,equipment_type,facility_id,facility,county,maintenance_date,maintenance_type,action_performed,technician,duration_hours,parts_cost,downtime_hours,maintenance_notes
+PM-000001,ME-00001,MRI,24979.0,Kenyatta University Teaching Refferal and Research Hospital,Nairobi,2024-10-07,Calibration,Filter replacement,Lydiah Wanyonyi,7.11,33344.53,0.26,Veniam adipisci corrupti ipsum fuga ipsam.
+PM-000002,ME-00001,MRI,24979.0,Kenyatta University Teaching Refferal and Research Hospital,Nairobi,2024-10-14,Component Replacement,Bearing inspection,Daniel Wanyonyi,3.81,4705.49,0.65,Officiis dolorum beatae quasi libero harum.
+PM-000003,ME-00002,Hemodialysis,24823.0,LIGHTHOUSE HOSPITAL AND REHABILITATION CENTRE,Uasin Gishu,2025-10-26,Corrective Maintenance,Bearing inspection,Ann Njuguna,6.27,31394.94,1.13,Dolor nostrum possimus voluptatum dicta consequatur asperiores.
+PM-000004,ME-00002,Hemodialysis,24823.0,LIGHTHOUSE HOSPITAL AND REHABILITATION CENTRE,Uasin Gishu,2024-12-28,Corrective Maintenance,Software diagnostics,Samwel Ali,4.21,33922.72,1.59,Pariatur quae mollitia enim error culpa.
+PM-000005,ME-00002,Hemodialysis,24823.0,LIGHTHOUSE HOSPITAL AND REHABILITATION CENTRE,Uasin Gishu,2026-02-18,Corrective Maintenance,Sensor calibration,Elvis Rop,0.97,0.0,3.74,Dolore voluptates recusandae dolores laudantium facere nemo.
+PM-000006,ME-00002,Hemodialysis,24823.0,LIGHTHOUSE HOSPITAL AND REHABILITATION CENTRE,Uasin Gishu,2025-08-14,Corrective Maintenance,General inspection,Bishop Daniel Nyangau,1.66,27848.37,1.21,Est voluptatum quaerat minima.
+PM-000007,ME-00002,Hemodialysis,24823.0,LIGHTHOUSE HOSPITAL AND REHABILITATION CENTRE,Uasin Gishu,2026-04-05,Inspection,Cooling system inspection,Ms Esther Karanja,4.43,18941.32,1.23,Ipsum perspiciatis exercitationem soluta.
+PM-000008,ME-00003,X-Ray,13907.0,Nyamekongoroto Health Centre,Migori,2026-04-14,Calibration,Cooling system inspection,Elvis Kariuki,6.25,20875.59,3.91,Inventore tenetur animi commodi.
+PM-000009,ME-00003,X-Ray,13907.0,Nyamekongoroto Health Centre,Migori,2024-12-12,Corrective Maintenance,Filter replacement,Jane Wangui,0.54,37613.05,6.68,Exercitationem velit tempora sapiente dolorum.
+PM-000010,ME-00004,MRI,12516.0,Meru District hospital,Meru,2025-12-22,Component Replacement,General inspection,Charles Mwanzia,6.37,69075.11,4.75,Modi magnam cumque velit culpa omnis quam non.
+PM-000011,ME-00004,MRI,12516.0,Meru District hospital,Meru,2026-06-01,Calibration,Pump inspection,Joseph Thomas,1.74,38323.34,2.65,Aliquid odit nemo officiis.
+PM-000012,ME-00005,CT,24979.0,Kenyatta University Teaching Refferal and Research Hospital,Nairobi,2026-04-03,Calibration,Bearing inspection,Julius Kipkemoi,3.52,46846.67,2.0,Suscipit molestias odit error doloribus rem illo.
+PM-000013,ME-00005,CT,24979.0,Kenyatta University Teaching Refferal and Research Hospital,Nairobi,2025-08-03,Component Replacement,Cooling system inspection,Marion Wanjiku,3.93,11369.17,0.2,Laborum dignissimos non est quaerat quasi.
+PM-000014,ME-00005,CT,24979.0,Kenyatta University Teaching Refferal and Research Hospital,Nairobi,2026-06-15,Component Replacement,Filter replacement,Rev Esther Chepkoech,5.31,29550.54,3.2,Autem dolores commodi ipsum consequuntur amet veniam.
+PM-000015,ME-00005,CT,24979.0,Kenyatta University Teaching Refferal and Research Hospital,Nairobi,2026-06-18,Calibration,Software diagnostics,Julius Towett,7.51,36793.58,5.45,Repellendus ut quam deleniti.
+PM-000016,ME-00006,Anesthesia,13380.0,Khorof Harar Sub-District Hospital,Wajir,2024-12-17,Calibration,Software diagnostics,Dalmas Ng'ang'a,4.07,7098.35,6.06,Libero at hic itaque dolores.
+PM-000017,ME-00006,Anesthesia,13380.0,Khorof Harar Sub-District Hospital,Wajir,2025-11-12,Preventive Maintenance,Pump inspection,Mrs Faith Kiplagat,0.84,62452.39,1.04,Enim ab autem consequatur eaque facilis illo.
+PM-000018,ME-00006,Anesthesia,13380.0,Khorof Harar Sub-District Hospital,Wajir,2024-09-20,Preventive Maintenance,Filter replacement,Mrs Charity Wafula,3.71,42561.3,5.77,Enim harum ipsum mollitia repudiandae numquam nostrum.
+PM-000019,ME-00006,Anesthesia,13380.0,Khorof Harar Sub-District Hospital,Wajir,2024-11-23,Calibration,Sensor calibration,Sarah Komen,1.16,46612.69,5.32,Nam facilis corporis nobis illo aliquam.
+PM-000020,ME-00007,Ultrasound,11161.0,Wamagana Health Centre,Nyeri,2024-09-15,Calibration,Software diagnostics,Rosemary Opondo,1.4,43501.27,3.32,Itaque non maiores eveniet nostrum cum voluptatibus.
+PM-000021,ME-00007,Ultrasound,11161.0,Wamagana Health Centre,Nyeri,2026-03-13,Calibration,Pump inspection,Hon Wambui Murithi,2.76,35067.18,4.51,Minus provident error repellendus fuga perferendis voluptatem.
+PM-000022,ME-00008,CT,13023.0,Kenyatta National Hospital,Nairobi,2025-11-12,Calibration,General inspection,Virginia Kimanzi,0.86,29076.65,0.51,Ad labore voluptas quos quod neque quam nesciunt.
+PM-000023,ME-00008,CT,13023.0,Kenyatta National Hospital,Nairobi,2024-12-26,Corrective Maintenance,Filter replacement,Alfred Joseph,1.68,6372.47,0.81,Corporis perspiciatis adipisci veniam beatae accusantium.
+PM-000024,ME-00008,CT,13023.0,Kenyatta National Hospital,Nairobi,2025-04-16,Component Replacement,Bearing inspection,Dr Irene Achieng,3.75,19975.67,3.87,Quod ullam sit quasi aperiam consequuntur dignissimos.
+PM-000025,ME-00009,Hemodialysis,21922.0,Jumuia Hospitals Kakamega Clinic,Kakamega,2025-04-25,Calibration,Software diagnostics,Antony Kiptoo,6.43,33770.21,0.02,Itaque modi molestias perspiciatis.
+PM-000026,ME-00009,Hemodialysis,21922.0,Jumuia Hospitals Kakamega Clinic,Kakamega,2026-06-20,Corrective Maintenance,Bearing inspection,Gabriel Mokua,5.67,3409.53,4.77,Nostrum deleniti doloribus nam dolore.
+PM-000027,ME-00009,Hemodialysis,21922.0,Jumuia Hospitals Kakamega Clinic,Kakamega,2025-04-04,Inspection,General inspection,Hon Leonard Wesonga,7.67,39996.71,4.6,Et expedita ut recusandae earum commodi perspiciatis.
+PM-000028,ME-00010,Ultrasound,23284.0,Saphire Healthcare Nursing Home,Mandera,2025-06-06,Corrective Maintenance,Pump inspection,Hon Mwanamisi Wario,7.34,45881.1,2.78,Aliquam veritatis aspernatur unde omnis.
+PM-000029,ME-00010,Ultrasound,23284.0,Saphire Healthcare Nursing Home,Mandera,2026-03-19,Corrective Maintenance,Software diagnostics,Paul Emmanuel,7.88,16141.71,3.24,Ut possimus consequatur nulla nesciunt.
+PM-000030,ME-00010,Ultrasound,23284.0,Saphire Healthcare Nursing Home,Mandera,2025-02-20,Corrective Maintenance,Bearing inspection,Carolyne Muli,1.13,2857.33,4.49,Amet impedit quaerat aut quo.
+PM-000031,ME-00010,Ultrasound,23284.0,Saphire Healthcare Nursing Home,Mandera,2024-08-20,Inspection,Electrical inspection,Nehemiah Wanjiku,7.09,0.0,2.51,Labore dicta vitae eum officia tenetur at.
+PM-000032,ME-00010,Ultrasound,23284.0,Saphire Healthcare Nursing Home,Mandera,2025-11-04,Calibration,Bearing inspection,Miriam Waithaka,1.97,22657.79,0.45,Totam cupiditate sunt.
+PM-000033,ME-00011,X-Ray,13544.0,Endiba Health Centre,Nyamira,2024-12-30,Inspection,Sensor calibration,Philomena Ngugi,1.52,0.0,4.35,Delectus quibusdam sit enim alias error nobis.
+PM-000034,ME-00011,X-Ray,13544.0,Endiba Health Centre,Nyamira,2026-08-07,Corrective Maintenance,Sensor calibration,Prof Vivian Mwita,5.46,17169.01,0.0,Laudantium vel sed iusto deserunt beatae cum.
+PM-000035,ME-00011,X-Ray,13544.0,Endiba Health Centre,Nyamira,2025-08-07,Calibration,General inspection,Michael Akinyi,4.71,31631.27,5.04,Ratione necessitatibus quidem cupiditate sequi tempore.
+PM-000036,ME-00011,X-Ray,13544.0,Endiba Health Centre,Nyamira,2026-05-20,Calibration,Software diagnostics,Sis Jackline Kipkoech,2.12,56939.51,2.19,Delectus consequuntur eum dolorum.
+PM-000037,ME-00011,X-Ray,13544.0,Endiba Health Centre,Nyamira,2025-03-06,Calibration,Pump inspection,Eng Agnes Simiyu,5.68,8098.9,2.86,Error quam accusamus officiis possimus aperiam.
+PM-000038,ME-00012,Ultrasound,24541.0,Oasis Health Sirare Medical Centre,Migori,2024-11-15,Preventive Maintenance,Software diagnostics,George Oduor,2.77,29160.68,0.5,Unde suscipit quo porro odit velit facilis.
+PM-000039,ME-00012,Ultrasound,24541.0,Oasis Health Sirare Medical Centre,Migori,2025-02-03,Preventive Maintenance,Sensor calibration,Felistus Muriuki,6.81,3176.74,3.54,Quibusdam non impedit molestias iusto modi optio.
+PM-000040,ME-00013,X-Ray,24772.0,ChanF Community& Family Health Services,Kajiado,2025-02-01,Corrective Maintenance,Cooling system inspection,Prof Gabriel Musa,7.54,3322.69,1.37,Minima minus facere totam.
+PM-000041,ME-00013,X-Ray,24772.0,ChanF Community& Family Health Services,Kajiado,2024-11-11,Component Replacement,Software diagnostics,Magdaline Kobia,7.58,0.0,2.09,Nemo corrupti eveniet maxime blanditiis.
+PM-000042,ME-00013,X-Ray,24772.0,ChanF Community& Family Health Services,Kajiado,2025-01-22,Corrective Maintenance,Bearing inspection,Anthony Ali,4.23,39579.24,1.7,Ipsum animi consequatur impedit natus nam perferendis.
+PM-000043,ME-00013,X-Ray,24772.0,ChanF Community& Family Health Services,Kajiado,2025-04-12,Calibration,Bearing inspection,John Cheruiyot,7.88,36399.81,3.18,Quia neque aliquid.
+PM-000044,ME-00013,X-Ray,24772.0,ChanF Community& Family Health Services,Kajiado,2025-05-10,Corrective Maintenance,Bearing inspection,Peter Gachanja,7.85,23876.15,4.56,Voluptates iusto enim debitis.
+PM-000045,ME-00014,Ultrasound,21805.0,Jirani Diagnostic Centre Machakos,Machakos,2024-11-29,Component Replacement,General inspection,Pastor Felix Jepkirui,7.57,30193.92,4.34,Sit tenetur fugiat placeat optio molestiae officiis.
+PM-000046,ME-00014,Ultrasound,21805.0,Jirani Diagnostic Centre Machakos,Machakos,2025-05-13,Calibration,Pump inspection,Grace Kiplangat,0.69,34893.75,4.07,Consectetur voluptatem rerum quidem voluptatem iure quaerat.
+PM-000047,ME-00015,X-Ray,16012.0,Mbale Rural Health Training Centre,Vihiga,2025-07-11,Inspection,Electrical inspection,Joshua Hussein,5.06,39869.17,1.94,Expedita eius vel quam beatae repellat in.
+PM-000048,ME-00015,X-Ray,16012.0,Mbale Rural Health Training Centre,Vihiga,2026-04-03,Calibration,Software diagnostics,Nancy Maina,2.03,16797.17,0.81,Alias nisi praesentium aliquid qui illo doloremque dolor.
+PM-000049,ME-00015,X-Ray,16012.0,Mbale Rural Health Training Centre,Vihiga,2026-06-17,Component Replacement,Cooling system inspection,Mr Daniel Wanjugu,6.62,26899.38,0.63,Repellendus quasi eum nisi perferendis.
+PM-000050,ME-00015,X-Ray,16012.0,Mbale Rural Health Training Centre,Vihiga,2025-04-22,Preventive Maintenance,Bearing inspection,Purity Wambui,1.77,11241.54,0.0,Dolore error aperiam veniam sunt tenetur numquam.
+PM-000051,ME-00016,CT,12867.0,Aga Khan Hospital,Nairobi,2025-07-13,Inspection,Cooling system inspection,Samson Chai,6.19,42558.73,3.43,Ratione eum impedit corrupti fugiat quidem.
+PM-000052,ME-00016,CT,12867.0,Aga Khan Hospital,Nairobi,2025-08-18,Component Replacement,Bearing inspection,Milka Ibrahim,4.77,35635.63,0.0,Rem totam natus voluptas.
+PM-000053,ME-00016,CT,12867.0,Aga Khan Hospital,Nairobi,2025-10-22,Calibration,General inspection,Daniel Abdullahi,7.51,25703.19,1.95,Ex aspernatur ipsum fuga modi.
+PM-000054,ME-00016,CT,12867.0,Aga Khan Hospital,Nairobi,2026-05-22,Inspection,Sensor calibration,Faith Kiptoo,1.75,13523.33,5.09,Nobis sit deleniti quis quam nam laboriosam sit.
+PM-000055,ME-00016,CT,12867.0,Aga Khan Hospital,Nairobi,2025-05-01,Inspection,Cooling system inspection,Annastacia Otieno,1.86,67243.22,4.12,Vitae blanditiis voluptatum laboriosam doloribus.
+PM-000056,ME-00017,MRI,25045.0,Mwai Kibaki Teaching and Referral Hospital,Nyeri,2025-11-28,Component Replacement,Cooling system inspection,Emmanuel Tuwei,4.21,28377.72,0.39,Eum eligendi iure officiis est facere sunt.
+PM-000057,ME-00017,MRI,25045.0,Mwai Kibaki Teaching and Referral Hospital,Nyeri,2025-08-12,Calibration,Pump inspection,Sophia Ngala,7.78,52429.21,1.09,Totam fuga impedit natus dolore corporis.
+PM-000058,ME-00017,MRI,25045.0,Mwai Kibaki Teaching and Referral Hospital,Nyeri,2025-03-06,Preventive Maintenance,Software diagnostics,Wanyama Mutunga,6.84,27233.63,1.34,Eos deserunt dolorem necessitatibus doloribus mollitia.
+PM-000059,ME-00017,MRI,25045.0,Mwai Kibaki Teaching and Referral Hospital,Nyeri,2026-01-29,Calibration,Bearing inspection,Prof Doris Osman,4.96,37266.18,1.12,Itaque quasi explicabo consequuntur molestias delectus suscipit.
+PM-000060,ME-00017,MRI,25045.0,Mwai Kibaki Teaching and Referral Hospital,Nyeri,2025-12-27,Calibration,Bearing inspection,Joy Nzioki,1.28,16965.06,0.0,Veniam pariatur quisquam impedit.
+PM-000061,ME-00018,Hemodialysis,11411.0,Hola District Hospital,Tana River,2026-06-01,Inspection,Software diagnostics,Moses Nderitu,7.12,28180.99,1.79,Dolor iste aperiam.
+PM-000062,ME-00019,Ultrasound,18761.0,Spa Nursing Home,Kiambu,2025-12-24,Corrective Maintenance,Bearing inspection,Ndirangu Ogega,0.79,36372.82,5.02,Accusamus minus illum accusantium quam modi enim.
+PM-000063,ME-00019,Ultrasound,18761.0,Spa Nursing Home,Kiambu,2025-09-10,Inspection,Sensor calibration,Pastor Alvin Kagwiria,4.17,23173.52,0.7,Ullam minima dolores nulla.
+PM-000064,ME-00019,Ultrasound,18761.0,Spa Nursing Home,Kiambu,2025-02-28,Calibration,Filter replacement,Rev Francis Ngugi,0.82,9814.49,1.48,Vero itaque doloribus possimus error repudiandae.
+PM-000065,ME-00020,Anesthesia,25454.0,Mediforte Hospital Limited,Kisii,2024-10-17,Inspection,Cooling system inspection,Mugendi Makori,4.05,36003.82,4.44,Atque fugit mollitia.
+PM-000066,ME-00020,Anesthesia,25454.0,Mediforte Hospital Limited,Kisii,2024-09-28,Calibration,Cooling system inspection,John Njoroge,3.3,0.0,0.95,Sapiente officia ex voluptate voluptate tempora ullam.
+PM-000067,ME-00020,Anesthesia,25454.0,Mediforte Hospital Limited,Kisii,2025-02-10,Preventive Maintenance,Filter replacement,Laura Kipsang,7.41,31591.19,6.81,Labore aliquid asperiores unde tempore natus adipisci.
+PM-000068,ME-00020,Anesthesia,25454.0,Mediforte Hospital Limited,Kisii,2026-08-07,Inspection,Filter replacement,Rev John Muthoni,3.89,27812.66,4.69,Quibusdam quae id aspernatur.
+PM-000069,ME-00020,Anesthesia,25454.0,Mediforte Hospital Limited,Kisii,2024-12-20,Preventive Maintenance,Bearing inspection,Kevin Kinoti,5.76,47287.23,0.53,Perspiciatis molestiae fugit qui ratione porro.
+PM-000070,ME-00021,Hemodialysis,14139.0,Tabaka Mission Hospital,Kisii,2024-10-15,Inspection,Bearing inspection,Osman Wangari,4.84,21761.54,2.89,Ipsa saepe excepturi quisquam.
+PM-000071,ME-00022,Anesthesia,23542.0,St.Marys Mother & Child Hospital (Kiambu Town ),Kiambu,2025-11-21,Corrective Maintenance,Cooling system inspection,Hon Mary Macharia,3.38,0.0,0.0,Laudantium explicabo velit inventore perspiciatis optio assumenda.
+PM-000072,ME-00022,Anesthesia,23542.0,St.Marys Mother & Child Hospital (Kiambu Town ),Kiambu,2025-12-09,Preventive Maintenance,Filter replacement,Deborah Chepkurui,4.41,24299.9,6.0,Eaque fugit quos culpa.
+PM-000073,ME-00023,Hemodialysis,13380.0,Khorof Harar Sub-District Hospital,Wajir,2025-06-14,Component Replacement,Filter replacement,Hon Sharon Otieno,4.65,18753.07,5.46,Ipsam quis aut assumenda inventore.
+PM-000074,ME-00023,Hemodialysis,13380.0,Khorof Harar Sub-District Hospital,Wajir,2025-10-22,Corrective Maintenance,General inspection,Thomas Omondi,5.38,16780.3,3.89,Explicabo at nisi eveniet.
+PM-000075,ME-00023,Hemodialysis,13380.0,Khorof Harar Sub-District Hospital,Wajir,2025-06-11,Component Replacement,Cooling system inspection,Joyce Chege,7.04,28877.76,1.32,Quam nam voluptatibus doloribus.
+PM-000076,ME-00023,Hemodialysis,13380.0,Khorof Harar Sub-District Hospital,Wajir,2025-09-24,Calibration,Sensor calibration,Monicah Njoroge,3.69,21360.43,2.4,Error laudantium aperiam ipsa in.
+PM-000077,ME-00023,Hemodialysis,13380.0,Khorof Harar Sub-District Hospital,Wajir,2025-08-27,Component Replacement,Sensor calibration,Dr Edwin Ambani,5.86,41299.13,1.76,Libero nulla itaque consequatur ab id sapiente fugit.
+PM-000078,ME-00024,X-Ray,14088.0,Simba Opepo Health Centre,Kisumu,2026-06-16,Inspection,General inspection,Pastor Jackline Wawira,7.52,26113.27,4.35,Consequatur eum veniam dicta et vitae voluptas eos.
+PM-000079,ME-00024,X-Ray,14088.0,Simba Opepo Health Centre,Kisumu,2026-02-06,Preventive Maintenance,Bearing inspection,Philip Muiruri,3.06,31635.97,3.35,Eveniet eligendi ratione facilis ut.
+PM-000080,ME-00025,X-Ray,22190.0,Kilusi Health Centre,Homa Bay,2025-01-18,Preventive Maintenance,Sensor calibration,Duke Kariuki,3.06,37566.22,0.8,Ad quas velit distinctio reiciendis rerum architecto.
+PM-000081,ME-00025,X-Ray,22190.0,Kilusi Health Centre,Homa Bay,2026-06-05,Component Replacement,Electrical inspection,Pastor Jeremiah Abdi,5.85,0.0,3.26,Doloribus omnis quaerat ratione asperiores.
+PM-000082,ME-00025,X-Ray,22190.0,Kilusi Health Centre,Homa Bay,2025-11-23,Component Replacement,Pump inspection,Anthony Katana,6.53,7778.0,1.73,Molestiae ratione facere tempora modi odit.
+PM-000083,ME-00027,Ultrasound,25723.0,Mimosa Cottage Hospital,Nairobi,2024-10-21,Calibration,Sensor calibration,Mildred Abdalla,7.77,10627.62,2.59,Cumque nostrum natus officia officia vitae.
+PM-000084,ME-00027,Ultrasound,25723.0,Mimosa Cottage Hospital,Nairobi,2025-04-30,Component Replacement,Filter replacement,Pastor James Kamau,3.88,25479.59,2.03,Magni maxime neque nemo ipsum.
+PM-000085,ME-00028,Hemodialysis,13841.0,Ndhiwa Sub-District Hospital,Homa Bay,2025-06-15,Inspection,Software diagnostics,Wilfred Nyabuto,6.62,57322.07,3.84,Corrupti voluptatum laboriosam eos ullam assumenda rerum.
+PM-000086,ME-00028,Hemodialysis,13841.0,Ndhiwa Sub-District Hospital,Homa Bay,2026-03-06,Preventive Maintenance,Software diagnostics,Beatrice Owino,0.67,16406.88,3.82,Maxime expedita atque quam iste.
+PM-000087,ME-00028,Hemodialysis,13841.0,Ndhiwa Sub-District Hospital,Homa Bay,2024-10-07,Preventive Maintenance,Software diagnostics,Faith Jepchirchir,5.69,48999.03,1.67,Sed officia perspiciatis.
+PM-000088,ME-00028,Hemodialysis,13841.0,Ndhiwa Sub-District Hospital,Homa Bay,2024-12-21,Preventive Maintenance,General inspection,Kevin Njeri,2.99,26487.37,3.11,Ex incidunt iure reiciendis.
+PM-000089,ME-00029,Ultrasound,14256.0,Biretwa health centre,Elgeyo Marakwet,2025-12-18,Inspection,Cooling system inspection,Ruth Abdalla,4.72,3332.5,0.31,Adipisci nostrum deserunt nihil harum provident.
+PM-000090,ME-00029,Ultrasound,14256.0,Biretwa health centre,Elgeyo Marakwet,2025-01-22,Component Replacement,Electrical inspection,Patricia Michael,3.28,33972.38,2.08,Neque reiciendis modi facilis.
+PM-000091,ME-00029,Ultrasound,14256.0,Biretwa health centre,Elgeyo Marakwet,2025-01-16,Inspection,Bearing inspection,James Guyo,1.29,8031.7,2.96,Minus odit nisi nostrum nesciunt expedita sapiente.
+PM-000092,ME-00029,Ultrasound,14256.0,Biretwa health centre,Elgeyo Marakwet,2025-12-08,Preventive Maintenance,Software diagnostics,Jelagat Wandera,7.01,57908.9,0.24,Ullam nihil perferendis est dolores.
+PM-000093,ME-00029,Ultrasound,14256.0,Biretwa health centre,Elgeyo Marakwet,2024-11-14,Component Replacement,Software diagnostics,Cynthia Abdi,5.71,17587.77,4.12,In consequuntur fugit delectus odio possimus.
+PM-000094,ME-00030,Hemodialysis,13798.0,Mbita Sub-County Hospital,Homa Bay,2025-12-30,Calibration,Software diagnostics,Damaris Kiprop,1.06,32154.07,5.61,Deleniti sapiente nulla sint.
+PM-000095,ME-00030,Hemodialysis,13798.0,Mbita Sub-County Hospital,Homa Bay,2024-08-23,Component Replacement,Sensor calibration,Daniel Odoyo,0.8,25494.34,4.47,Magnam libero placeat impedit saepe laborum assumenda.
+PM-000096,ME-00030,Hemodialysis,13798.0,Mbita Sub-County Hospital,Homa Bay,2024-09-08,Calibration,General inspection,Prof Alex Wanjala,3.92,9143.97,2.19,Enim quos natus quo libero magni nemo.
+PM-000097,ME-00031,Ventilator,10491.0,Karen Hospital Annex,Nyeri,2025-03-12,Component Replacement,Filter replacement,Bishop Noah Wanyonyi,1.52,4665.26,4.45,Quis ipsam dolor.
+PM-000098,ME-00031,Ventilator,10491.0,Karen Hospital Annex,Nyeri,2025-07-12,Calibration,Software diagnostics,Regina Mwangangi,2.91,33038.1,0.0,Error voluptatum ipsum expedita repellendus.
+PM-000099,ME-00031,Ventilator,10491.0,Karen Hospital Annex,Nyeri,2025-07-23,Inspection,Sensor calibration,Dr Njoki Mutua,5.15,46896.65,4.1,Porro similique nostrum incidunt nulla quos repellendus rem.
+PM-000100,ME-00033,Hemodialysis,19037.0,Medina Hospital,Garissa,2025-11-01,Corrective Maintenance,General inspection,Sis Lilian Kiplangat,1.78,42611.85,3.4,Voluptatem eos nemo veritatis maiores tempore.
+PM-000101,ME-00033,Hemodialysis,19037.0,Medina Hospital,Garissa,2026-05-11,Preventive Maintenance,Electrical inspection,Esther Chepchirchir,3.62,65494.36,1.68,Ullam voluptatibus sint consectetur sint dolorum.
+PM-000102,ME-00033,Hemodialysis,19037.0,Medina Hospital,Garissa,2026-02-19,Calibration,Software diagnostics,Eng Rehema Salim,3.58,34249.01,0.0,Consequuntur odio occaecati fugiat asperiores recusandae quisquam.
+PM-000103,ME-00033,Hemodialysis,19037.0,Medina Hospital,Garissa,2025-06-24,Calibration,Cooling system inspection,Mohammed Gathoni,2.36,66543.22,3.73,Iste laborum neque sit sed at.
+PM-000104,ME-00034,Ultrasound,12545.0,Moyale Nursing Home,Marsabit,2025-08-07,Calibration,Bearing inspection,Caleb Musyoka,3.39,46982.53,1.08,Recusandae id voluptas repudiandae.
+PM-000105,ME-00034,Ultrasound,12545.0,Moyale Nursing Home,Marsabit,2025-09-04,Corrective Maintenance,Bearing inspection,Susan Wambua,1.37,16767.78,0.39,Neque necessitatibus laborum exercitationem placeat aliquid aut.
+PM-000106,ME-00034,Ultrasound,12545.0,Moyale Nursing Home,Marsabit,2026-04-16,Component Replacement,Pump inspection,Fr John Wambura,4.42,0.0,2.62,Ipsam a vero dicta.
+PM-000107,ME-00034,Ultrasound,12545.0,Moyale Nursing Home,Marsabit,2026-02-01,Component Replacement,General inspection,Priscilla Ibrahim,5.59,26008.74,6.0,At facere assumenda optio officiis.
+PM-000108,ME-00034,Ultrasound,12545.0,Moyale Nursing Home,Marsabit,2024-09-25,Calibration,General inspection,Prof Maurine Ekai,4.11,19860.17,6.35,Omnis provident a labore consequatur dolorem.
+PM-000109,ME-00035,Hemodialysis,24981.0,Glogoh Hospital Limited,Uasin Gishu,2026-01-26,Inspection,Pump inspection,John Muthui,4.6,10703.17,0.0,Voluptates in consequatur architecto.
+PM-000110,ME-00035,Hemodialysis,24981.0,Glogoh Hospital Limited,Uasin Gishu,2025-06-09,Calibration,Sensor calibration,Linda Omondi,5.06,19111.26,5.18,Facilis error fugit repellendus soluta odit.
+PM-000111,ME-00035,Hemodialysis,24981.0,Glogoh Hospital Limited,Uasin Gishu,2026-01-23,Inspection,General inspection,Mercy Mugambi,1.85,2598.07,4.09,Officiis ipsam quam occaecati corrupti illum placeat similique.
+PM-000112,ME-00035,Hemodialysis,24981.0,Glogoh Hospital Limited,Uasin Gishu,2024-10-22,Inspection,Cooling system inspection,Elizabeth Juma,0.83,0.0,3.61,Expedita inventore ratione dolorum officia dolorum.
+PM-000113,ME-00036,Ultrasound,15827.0,Bungasi Health Centre,Kakamega,2025-11-25,Inspection,Filter replacement,Eliud Wambua,2.56,0.0,0.0,Sed omnis error.
+PM-000114,ME-00036,Ultrasound,15827.0,Bungasi Health Centre,Kakamega,2025-09-22,Inspection,Cooling system inspection,Wilson Kathure,1.63,33218.34,3.45,Officia quos recusandae dolores harum.
+PM-000115,ME-00036,Ultrasound,15827.0,Bungasi Health Centre,Kakamega,2025-02-19,Component Replacement,Pump inspection,Elvis Maina,4.38,8356.31,3.48,Voluptates ut consequatur.
+PM-000116,ME-00036,Ultrasound,15827.0,Bungasi Health Centre,Kakamega,2026-06-15,Corrective Maintenance,Filter replacement,Pastor Ali Odero,5.42,40353.37,1.84,Veritatis quo accusantium architecto ea aliquam aperiam.
+PM-000117,ME-00037,Ventilator,13158.0,Radiant Pangani Hospital,Nairobi,2026-04-21,Component Replacement,Sensor calibration,Sis Joyce Naliaka,5.28,3907.4,0.08,Incidunt illo odit modi corrupti assumenda.
+PM-000118,ME-00037,Ventilator,13158.0,Radiant Pangani Hospital,Nairobi,2024-10-16,Corrective Maintenance,General inspection,Erastus Vaati,4.76,25608.22,3.63,Modi hic odio rerum.
+PM-000119,ME-00037,Ventilator,13158.0,Radiant Pangani Hospital,Nairobi,2026-01-26,Component Replacement,Pump inspection,Brian Kipkemboi,3.03,10812.46,6.07,Animi assumenda ipsa iste non.
+PM-000120,ME-00038,MRI,12004.0,Embu Provincial General Hospital,Embu,2025-04-13,Preventive Maintenance,Filter replacement,Mutinda Kirwa,6.78,19218.06,0.9,Accusamus consequatur accusamus libero.
+PM-000121,ME-00038,MRI,12004.0,Embu Provincial General Hospital,Embu,2025-05-12,Corrective Maintenance,Sensor calibration,Hussein Ndiritu,7.67,15068.69,3.48,Cumque consectetur quos eaque suscipit.
+PM-000122,ME-00038,MRI,12004.0,Embu Provincial General Hospital,Embu,2026-04-07,Component Replacement,General inspection,Rose Mwaura,4.09,22558.58,3.0,Aperiam quae nemo aspernatur iste facere libero.
+PM-000123,ME-00038,MRI,12004.0,Embu Provincial General Hospital,Embu,2025-10-30,Inspection,Pump inspection,Cynthia Cheruiyot,6.98,20535.96,0.11,Tempora perferendis beatae qui.
+PM-000124,ME-00039,MRI,12004.0,Embu Provincial General Hospital,Embu,2024-08-17,Component Replacement,Filter replacement,Evalyne Otieno,5.74,15662.64,2.56,Iusto fugit corrupti.
+PM-000125,ME-00039,MRI,12004.0,Embu Provincial General Hospital,Embu,2026-08-09,Component Replacement,General inspection,Mr Mark Nur,3.25,15228.72,3.62,Dolore dolorum totam eum repudiandae nemo.
+PM-000126,ME-00039,MRI,12004.0,Embu Provincial General Hospital,Embu,2024-11-16,Inspection,Filter replacement,Boniface Odhiambo,6.99,23923.66,2.81,Rem voluptatem veritatis architecto iure.
+PM-000127,ME-00039,MRI,12004.0,Embu Provincial General Hospital,Embu,2025-03-23,Corrective Maintenance,Cooling system inspection,Hon Evans Chemutai,7.96,25158.49,4.03,Fuga eos quos.
+PM-000128,ME-00040,Hemodialysis,22934.0,Mazira Memorial Hospital,Kajiado,2026-03-13,Calibration,Bearing inspection,Kevin Chepkoech,2.29,30342.41,3.09,Voluptatum quod quasi molestias recusandae corrupti ut.
+PM-000129,ME-00040,Hemodialysis,22934.0,Mazira Memorial Hospital,Kajiado,2024-09-03,Calibration,Software diagnostics,Abigael Musembi,3.75,29164.44,3.9,Veritatis a omnis.
+PM-000130,ME-00040,Hemodialysis,22934.0,Mazira Memorial Hospital,Kajiado,2026-06-06,Component Replacement,Cooling system inspection,Elias Omondi,2.64,0.0,3.27,Voluptatem in vero voluptate consequuntur eius aliquam.
+PM-000131,ME-00040,Hemodialysis,22934.0,Mazira Memorial Hospital,Kajiado,2025-02-11,Calibration,Electrical inspection,Bishop Hassan Galgallo,2.01,43041.9,3.39,Voluptate assumenda atque consequatur reprehenderit asperiores necessitatibus.
+PM-000132,ME-00041,Ventilator,12605.0,Mutuati Sub-District Hospital,Meru,2025-07-19,Corrective Maintenance,General inspection,Ephantus Mutua,3.38,28684.76,1.25,Sed unde hic rerum eveniet.
+PM-000133,ME-00041,Ventilator,12605.0,Mutuati Sub-District Hospital,Meru,2025-08-02,Calibration,Bearing inspection,Christine Titus,4.97,45901.34,2.44,Quod nesciunt culpa cum.
+PM-000134,ME-00041,Ventilator,12605.0,Mutuati Sub-District Hospital,Meru,2025-08-12,Inspection,General inspection,Rev Esther Nyongesa,2.23,12576.26,1.65,Iste iure sequi at rem.
+PM-000135,ME-00043,CT,13074.0,The Mater Misericordiae Hospital,Nairobi,2025-04-09,Calibration,Software diagnostics,Mr Paul Chebii,3.29,32213.96,0.28,At dolorum explicabo maiores.
+PM-000136,ME-00043,CT,13074.0,The Mater Misericordiae Hospital,Nairobi,2026-01-23,Calibration,Pump inspection,Margaret Weru,1.56,7304.75,0.89,Veritatis sequi nam.
+PM-000137,ME-00044,CT,25719.0,The white cresent Hospital,Nandi,2025-10-17,Inspection,Software diagnostics,Mercy Kamau,5.83,57712.9,5.95,Commodi aperiam quos dolore.
+PM-000138,ME-00044,CT,25719.0,The white cresent Hospital,Nandi,2025-01-16,Preventive Maintenance,Pump inspection,Pastor Erick Kilonzo,7.63,50513.63,2.82,Neque ea repellat accusantium.
+PM-000139,ME-00044,CT,25719.0,The white cresent Hospital,Nandi,2024-10-05,Calibration,General inspection,Penina Njeru,4.26,1555.21,1.05,At sed repellat commodi.
+PM-000140,ME-00044,CT,25719.0,The white cresent Hospital,Nandi,2025-08-09,Calibration,Pump inspection,Jane Noor,7.64,31018.71,6.66,Libero fugit incidunt explicabo tenetur eius.
+PM-000141,ME-00045,Patient Monitor,13068.0,Marie Stopes Nursing Home (Eastleigh),Nairobi,2025-07-28,Inspection,Sensor calibration,Faith Joseph,7.67,0.0,0.3,Officia libero sunt laboriosam assumenda.
+PM-000142,ME-00045,Patient Monitor,13068.0,Marie Stopes Nursing Home (Eastleigh),Nairobi,2025-06-09,Inspection,Software diagnostics,Alice Waithera,7.37,13854.58,2.18,Dolorum voluptatibus molestiae accusantium fugit quae laboriosam.
+PM-000143,ME-00046,X-Ray,12166.0,Kamutei Health Centre,Kitui,2026-04-14,Preventive Maintenance,Pump inspection,Mwangi Nekesa,6.4,11094.25,3.47,Harum debitis eum dolor tempore quod.
+PM-000144,ME-00046,X-Ray,12166.0,Kamutei Health Centre,Kitui,2024-09-30,Component Replacement,General inspection,Fr Geoffrey Kitsao,1.13,0.0,0.01,Voluptate aut omnis eaque repellendus.
+PM-000145,ME-00047,MRI,10539.0,Kiambu County Referal Hospital,Kiambu,2026-07-29,Calibration,Software diagnostics,Peter Jefwa,0.51,22246.87,0.0,Nemo voluptatem harum vel voluptatibus.
+PM-000146,ME-00047,MRI,10539.0,Kiambu County Referal Hospital,Kiambu,2024-12-28,Preventive Maintenance,Cooling system inspection,Christine Anyango,7.44,10673.32,2.81,Totam adipisci praesentium veniam natus natus.
+PM-000147,ME-00047,MRI,10539.0,Kiambu County Referal Hospital,Kiambu,2025-01-09,Corrective Maintenance,Filter replacement,Fr Andrew Njeri,3.81,34078.57,0.0,At doloremque dolor.
+PM-000148,ME-00049,CT,13074.0,The Mater Misericordiae Hospital,Nairobi,2025-09-28,Preventive Maintenance,Cooling system inspection,John Kiilu,6.34,22438.97,4.98,Rem exercitationem debitis rem sit.
+PM-000149,ME-00049,CT,13074.0,The Mater Misericordiae Hospital,Nairobi,2024-10-01,Component Replacement,Sensor calibration,Elizabeth Mokaya,5.33,10570.8,1.58,Quo sed similique vero.
+PM-000150,ME-00049,CT,13074.0,The Mater Misericordiae Hospital,Nairobi,2025-06-02,Calibration,Sensor calibration,Githinji Ngugi,0.77,4107.62,1.42,Excepturi eum voluptate quasi.
+PM-000151,ME-00049,CT,13074.0,The Mater Misericordiae Hospital,Nairobi,2025-07-21,Calibration,Bearing inspection,Fr Dickson Njeri,1.44,0.0,1.04,Possimus ut ratione dolore nihil cupiditate esse.
+PM-000152,ME-00051,CT,15915.0,Kakamega County General Hospital,Kakamega,2026-02-01,Preventive Maintenance,Electrical inspection,Esther Kenga,4.83,13594.31,2.05,Hic voluptatibus vitae adipisci nobis ullam voluptas.
+PM-000153,ME-00051,CT,15915.0,Kakamega County General Hospital,Kakamega,2025-02-03,Preventive Maintenance,Electrical inspection,Dominic Mutanu,3.26,0.0,0.36,Ex aspernatur expedita eum.
+PM-000154,ME-00051,CT,15915.0,Kakamega County General Hospital,Kakamega,2025-12-23,Preventive Maintenance,Electrical inspection,Maria Guyo,1.73,0.0,0.01,Ipsum eaque dolorum architecto ducimus autem.
+PM-000155,ME-00051,CT,15915.0,Kakamega County General Hospital,Kakamega,2024-08-16,Calibration,Software diagnostics,Brenda Ntinyari,3.97,13835.53,1.79,Sunt laudantium fugiat molestias.
+PM-000156,ME-00051,CT,15915.0,Kakamega County General Hospital,Kakamega,2024-11-02,Preventive Maintenance,Bearing inspection,Fr Mbugua Chepngeno,7.45,36227.46,2.13,Cum asperiores sapiente eos eum.
+PM-000157,ME-00052,MRI,25719.0,The white cresent Hospital,Nandi,2024-11-05,Component Replacement,Sensor calibration,Rose Ndiema,7.59,21071.07,0.12,Quasi molestias tempore at.
+PM-000158,ME-00052,MRI,25719.0,The white cresent Hospital,Nandi,2025-11-20,Inspection,Pump inspection,Kipngetich Mokaya,0.79,23462.11,2.56,Velit cumque suscipit culpa aut dignissimos.
+PM-000159,ME-00052,MRI,25719.0,The white cresent Hospital,Nandi,2025-01-10,Preventive Maintenance,Software diagnostics,Sis Mariam Jepkoech,3.47,23021.42,6.34,Optio error atque hic mollitia.
+PM-000160,ME-00052,MRI,25719.0,The white cresent Hospital,Nandi,2025-09-01,Corrective Maintenance,Bearing inspection,Faith Otieno,2.44,30295.69,3.2,Eos optio nobis dicta.
+PM-000161,ME-00053,CT,10539.0,Kiambu County Referal Hospital,Kiambu,2024-09-04,Preventive Maintenance,Cooling system inspection,Grace Chebet,6.05,51803.24,3.22,Labore blanditiis quos iusto.
+PM-000162,ME-00053,CT,10539.0,Kiambu County Referal Hospital,Kiambu,2026-07-12,Inspection,Filter replacement,Francis Mwita,6.63,27968.85,3.03,Delectus suscipit fuga ipsum ea iure.
+PM-000163,ME-00053,CT,10539.0,Kiambu County Referal Hospital,Kiambu,2025-02-07,Inspection,Cooling system inspection,Hon Dominic Atieno,5.16,19744.82,2.43,Assumenda exercitationem molestiae voluptas.
+PM-000164,ME-00053,CT,10539.0,Kiambu County Referal Hospital,Kiambu,2025-11-17,Calibration,Electrical inspection,Damaris Chumba,3.01,24033.77,4.26,In modi sint labore sunt labore aspernatur.
+PM-000165,ME-00054,Anesthesia,15761.0,Unilever Central Hospital,Kericho,2026-07-18,Preventive Maintenance,Software diagnostics,Mr Ahmed Muthiani,6.3,9090.8,0.96,Perspiciatis nulla blanditiis quidem cupiditate voluptates voluptas.
+PM-000166,ME-00054,Anesthesia,15761.0,Unilever Central Hospital,Kericho,2026-05-05,Calibration,Bearing inspection,Esther Rono,1.35,38669.72,3.58,Dicta reprehenderit corporis nisi eum quas.
+PM-000167,ME-00054,Anesthesia,15761.0,Unilever Central Hospital,Kericho,2026-05-05,Component Replacement,Pump inspection,Mercy Nyakundi,1.05,24456.35,0.0,Eveniet eius itaque sit ratione numquam minima.
+PM-000168,ME-00055,CT,13194.0,National Spinal Injury Hospital,Nairobi,2025-07-07,Corrective Maintenance,Filter replacement,Irene Wambui,5.1,10846.76,3.44,Nesciunt vitae aut autem quod ratione sint sunt.
+PM-000169,ME-00055,CT,13194.0,National Spinal Injury Hospital,Nairobi,2026-06-28,Calibration,Software diagnostics,Prof Brenda Said,0.85,16250.41,0.03,Labore cupiditate illo nulla perspiciatis illo id soluta.
+PM-000170,ME-00056,X-Ray,22967.0,Vital Solutions Health Centre,Narok,2026-02-03,Inspection,Cooling system inspection,Faith Bett,3.08,20239.61,4.66,Tempore accusantium repellendus esse eligendi.
+PM-000171,ME-00056,X-Ray,22967.0,Vital Solutions Health Centre,Narok,2025-09-01,Preventive Maintenance,Filter replacement,Dr Aftin Hussein,7.11,21617.7,1.11,Voluptate ipsam repudiandae earum impedit.
+PM-000172,ME-00056,X-Ray,22967.0,Vital Solutions Health Centre,Narok,2025-12-30,Component Replacement,General inspection,Ruth Ouma,2.97,6182.88,1.83,Qui quis sint reprehenderit maiores culpa.
+PM-000173,ME-00057,Ultrasound,12668.0,North Horr Health Centre,Marsabit,2025-04-14,Component Replacement,Electrical inspection,Joel Abdi,5.01,21122.68,2.1,Sunt adipisci deserunt rerum saepe dolorum itaque.
+PM-000174,ME-00057,Ultrasound,12668.0,North Horr Health Centre,Marsabit,2026-07-30,Component Replacement,Bearing inspection,Eng Lilian Bashir,0.52,58155.45,4.82,Id ullam perspiciatis doloribus laborum ipsum vero.
+PM-000175,ME-00057,Ultrasound,12668.0,North Horr Health Centre,Marsabit,2025-08-19,Calibration,Bearing inspection,Mark Owino,4.84,17913.48,3.54,Quibusdam porro eligendi harum cum.
+PM-000176,ME-00057,Ultrasound,12668.0,North Horr Health Centre,Marsabit,2025-11-03,Corrective Maintenance,Filter replacement,Prof Mwaniki Mumbi,1.83,29289.56,0.0,Eaque illum accusantium quos quisquam.
+PM-000177,ME-00058,MRI,24979.0,Kenyatta University Teaching Refferal and Research Hospital,Nairobi,2024-08-22,Corrective Maintenance,Electrical inspection,Okumu Mumbi,3.12,55630.63,1.93,Reiciendis dolore non velit quae quae eius tempora.
+PM-000178,ME-00058,MRI,24979.0,Kenyatta University Teaching Refferal and Research Hospital,Nairobi,2026-06-08,Corrective Maintenance,Pump inspection,Pastor Margaret Ng'ang'a,1.83,38261.85,4.31,Repudiandae id aut maiores optio sapiente fugiat.
+PM-000179,ME-00058,MRI,24979.0,Kenyatta University Teaching Refferal and Research Hospital,Nairobi,2025-12-31,Inspection,Cooling system inspection,Ismail Koech,2.93,53307.21,1.4,Laboriosam excepturi eius eveniet.
+PM-000180,ME-00059,Ventilator,21676.0,RAPHA HOSPITAL -MAKUENI,Makueni,2025-03-19,Inspection,Sensor calibration,Atieno Kaberia,2.36,32884.87,0.0,Deleniti maxime dolores animi similique.
+PM-000181,ME-00059,Ventilator,21676.0,RAPHA HOSPITAL -MAKUENI,Makueni,2026-05-07,Calibration,Electrical inspection,Amos Anyango,2.1,12386.34,0.0,Quam omnis voluptatum ea.
+PM-000182,ME-00061,Ventilator,14294.0,Chebiemit District Hospital,Elgeyo Marakwet,2025-07-07,Inspection,Bearing inspection,Rev Rachael Njagi,6.08,20219.81,7.22,Repellendus exercitationem quae placeat odit labore velit.
+PM-000183,ME-00061,Ventilator,14294.0,Chebiemit District Hospital,Elgeyo Marakwet,2025-05-21,Preventive Maintenance,General inspection,Simon Njoroge,5.47,37847.35,6.43,Debitis atque consectetur ea repellat quis delectus.
+PM-000184,ME-00061,Ventilator,14294.0,Chebiemit District Hospital,Elgeyo Marakwet,2026-01-25,Component Replacement,Cooling system inspection,Ms Caroline Kimani,2.89,37399.79,0.99,In suscipit fuga nesciunt iure.
+PM-000185,ME-00062,MRI,15288.0,Nakuru Provincial General Hospital,Nakuru,2024-11-15,Inspection,Cooling system inspection,Peter Kiarie,2.77,18283.1,2.34,Velit architecto suscipit magnam sint fugit error amet.
+PM-000186,ME-00062,MRI,15288.0,Nakuru Provincial General Hospital,Nakuru,2026-06-10,Inspection,Bearing inspection,Elizabeth Achieng,5.96,25024.85,1.58,Voluptates tempora voluptates corporis similique debitis.
+PM-000187,ME-00062,MRI,15288.0,Nakuru Provincial General Hospital,Nakuru,2024-10-17,Corrective Maintenance,Pump inspection,Collins Jelle,4.12,21958.79,2.14,Odio a earum quis cumque quisquam.
+PM-000188,ME-00063,Hemodialysis,13298.0,Balambala Sub-District Hospital,Garissa,2025-08-31,Inspection,Software diagnostics,Dr Daniel Gitau,5.65,27509.6,1.59,Illo vitae fugit alias dicta fuga.
+PM-000189,ME-00063,Hemodialysis,13298.0,Balambala Sub-District Hospital,Garissa,2024-08-26,Inspection,General inspection,Sis Ruth Salim,6.3,38426.37,0.27,Quasi dolorem soluta est aut magnam esse aperiam.
+PM-000190,ME-00064,X-Ray,16438.0,Kyeleni Health Centre,Machakos,2024-09-20,Calibration,Sensor calibration,Hafsa Ndungu,1.26,25001.82,6.37,Nisi excepturi suscipit voluptatum exercitationem temporibus facere.
+PM-000191,ME-00064,X-Ray,16438.0,Kyeleni Health Centre,Machakos,2025-01-09,Corrective Maintenance,Electrical inspection,Hafsa Nyamu,2.07,55591.7,4.03,Accusantium dolore voluptates distinctio accusantium magnam.
+PM-000192,ME-00065,Ultrasound,20565.0,Olkaria Community Health Centre(Naivasha),Nakuru,2024-11-19,Corrective Maintenance,Bearing inspection,Mrs Catherine Karani,5.93,28073.3,0.06,Numquam nisi aliquid autem saepe aliquid blanditiis.
+PM-000193,ME-00065,Ultrasound,20565.0,Olkaria Community Health Centre(Naivasha),Nakuru,2025-07-27,Corrective Maintenance,Software diagnostics,Ms Halima Mungai,5.73,49618.96,3.65,Dignissimos placeat ab in.
+PM-000194,ME-00065,Ultrasound,20565.0,Olkaria Community Health Centre(Naivasha),Nakuru,2024-11-02,Inspection,Cooling system inspection,Omondi Makau,4.77,33779.83,2.44,In tempore maiores nulla.
+PM-000195,ME-00065,Ultrasound,20565.0,Olkaria Community Health Centre(Naivasha),Nakuru,2025-03-23,Component Replacement,General inspection,Zipporah Awino,3.88,18939.31,4.18,Dicta ea minima dicta provident eos aliquam libero.
+PM-000196,ME-00066,Ventilator,23674.0,Sori Lakeside Hospital Annex-Nyatike,Migori,2025-01-24,Preventive Maintenance,Filter replacement,Abdul Okoth,3.23,13647.39,2.3,Accusamus at beatae.
+PM-000197,ME-00066,Ventilator,23674.0,Sori Lakeside Hospital Annex-Nyatike,Migori,2025-11-04,Inspection,Bearing inspection,Samson Akello,5.08,30556.57,2.09,Asperiores quam temporibus officia itaque voluptate eaque.
+PM-000198,ME-00066,Ventilator,23674.0,Sori Lakeside Hospital Annex-Nyatike,Migori,2024-09-23,Component Replacement,Software diagnostics,Jelagat Kimaiyo,4.47,7673.16,1.86,Facere perspiciatis incidunt blanditiis sed.
+PM-000199,ME-00066,Ventilator,23674.0,Sori Lakeside Hospital Annex-Nyatike,Migori,2026-07-08,Component Replacement,Bearing inspection,Mary Abdi,5.52,21526.6,1.55,Eveniet tempora veritatis eaque.
+PM-000200,ME-00066,Ventilator,23674.0,Sori Lakeside Hospital Annex-Nyatike,Migori,2026-03-08,Component Replacement,Filter replacement,Cynthia Owino,2.36,0.0,3.22,Id vitae earum harum.
+PM-000201,ME-00067,MRI,13074.0,The Mater Misericordiae Hospital,Nairobi,2026-06-07,Inspection,Cooling system inspection,Daud Ruto,6.58,19137.5,0.0,Beatae possimus animi velit.
+PM-000202,ME-00067,MRI,13074.0,The Mater Misericordiae Hospital,Nairobi,2024-12-17,Component Replacement,Cooling system inspection,Alice Kipruto,2.68,33415.58,3.99,Perspiciatis debitis fugit facere adipisci placeat saepe.
+PM-000203,ME-00067,MRI,13074.0,The Mater Misericordiae Hospital,Nairobi,2026-07-09,Corrective Maintenance,General inspection,Hellen Osman,4.1,23361.95,5.22,Ipsam aperiam omnis accusamus sit minima.
+PM-000204,ME-00067,MRI,13074.0,The Mater Misericordiae Hospital,Nairobi,2026-03-16,Calibration,Pump inspection,Pius Kimani,7.89,26341.69,2.46,Maxime porro nulla inventore quas laboriosam.
+PM-000205,ME-00067,MRI,13074.0,The Mater Misericordiae Hospital,Nairobi,2026-01-13,Preventive Maintenance,Software diagnostics,Duncan Wambui,7.59,29375.26,3.89,Tempora nostrum accusamus vel magni iusto libero.
+PM-000206,ME-00069,Ultrasound,17661.0,Mutethia Kiraone Nursing Home,Meru,2024-12-22,Component Replacement,Pump inspection,Patricia Anyango,5.76,13909.93,1.94,Voluptas amet dolore officia illo doloremque.
+PM-000207,ME-00069,Ultrasound,17661.0,Mutethia Kiraone Nursing Home,Meru,2025-08-07,Corrective Maintenance,Software diagnostics,Ngugi Mutai,1.83,32597.06,0.26,Ipsum blanditiis libero officiis aut impedit nam.
+PM-000208,ME-00069,Ultrasound,17661.0,Mutethia Kiraone Nursing Home,Meru,2024-08-16,Component Replacement,Bearing inspection,Dr Tonny Ekidor,6.65,31412.93,0.73,Tempora natus omnis itaque exercitationem.
+PM-000209,ME-00070,X-Ray,12921.0,Dorkcare Nursing Home,Nairobi,2026-05-19,Inspection,Sensor calibration,Winny Ewoi,3.62,12391.7,1.33,Nam nulla labore omnis quaerat beatae.
+PM-000210,ME-00070,X-Ray,12921.0,Dorkcare Nursing Home,Nairobi,2026-03-28,Calibration,Pump inspection,Victor Mutuku,3.36,0.0,3.53,Molestias fugiat autem tempore laudantium.
+PM-000211,ME-00071,Ultrasound,14781.0,Kapteren Health Centre,Elgeyo Marakwet,2026-05-16,Component Replacement,Software diagnostics,Mutinda Akoth,4.22,58617.76,2.17,Nostrum deleniti ut hic itaque.
+PM-000212,ME-00071,Ultrasound,14781.0,Kapteren Health Centre,Elgeyo Marakwet,2026-04-14,Corrective Maintenance,General inspection,Jacinta Omondi,7.8,57278.92,1.8,Aliquid odio perferendis commodi tempora itaque.
+PM-000213,ME-00071,Ultrasound,14781.0,Kapteren Health Centre,Elgeyo Marakwet,2025-11-16,Corrective Maintenance,Pump inspection,Daniel Awino,0.5,6921.61,5.66,Quasi mollitia inventore nesciunt unde quos tenetur.
+PM-000214,ME-00071,Ultrasound,14781.0,Kapteren Health Centre,Elgeyo Marakwet,2026-02-04,Inspection,Bearing inspection,Ibrahim Odoyo,6.56,51751.83,2.19,Harum nobis sunt magnam.
+PM-000215,ME-00071,Ultrasound,14781.0,Kapteren Health Centre,Elgeyo Marakwet,2025-06-10,Component Replacement,Pump inspection,Eng Lilian Mmboga,2.02,29687.67,1.99,Iste consequatur impedit praesentium quibusdam.
+PM-000216,ME-00072,MRI,12438.0,Machakos County Referral Hospital,Machakos,2025-04-05,Calibration,General inspection,Bishop Philemon Okeyo,4.2,4797.17,0.0,Odio dicta numquam enim exercitationem perferendis voluptatem.
+PM-000217,ME-00072,MRI,12438.0,Machakos County Referral Hospital,Machakos,2026-01-02,Component Replacement,Cooling system inspection,Sheila Masinde,4.05,20132.97,1.73,Quae quis natus nesciunt velit quae.
+PM-000218,ME-00073,Patient Monitor,13551.0,Etono Health Centre,Nyamira,2026-01-21,Component Replacement,Bearing inspection,Mumo Katana,4.93,30821.02,0.0,Repellat minima ad corporis pariatur dicta.
+PM-000219,ME-00073,Patient Monitor,13551.0,Etono Health Centre,Nyamira,2026-03-21,Component Replacement,General inspection,Eng Marvin James,7.68,14250.9,0.0,Saepe porro eos quidem.
+PM-000220,ME-00074,Hemodialysis,22879.0,ATIMIROS MEMORIAL,Uasin Gishu,2024-09-10,Preventive Maintenance,Bearing inspection,Pastor Sharon Mulinge,0.55,16079.08,1.79,Sint quia natus dolores quos reiciendis enim.
+PM-000221,ME-00074,Hemodialysis,22879.0,ATIMIROS MEMORIAL,Uasin Gishu,2026-01-14,Component Replacement,Software diagnostics,Priscah Chege,1.25,48003.96,5.49,Vitae amet quia dicta sit similique.
+PM-000222,ME-00074,Hemodialysis,22879.0,ATIMIROS MEMORIAL,Uasin Gishu,2025-07-26,Component Replacement,Bearing inspection,Prof Okumu Mokaya,5.89,23574.72,1.7,Quidem molestias nobis quod vitae eos.
+PM-000223,ME-00074,Hemodialysis,22879.0,ATIMIROS MEMORIAL,Uasin Gishu,2024-12-31,Inspection,Sensor calibration,Brian Nyale,3.65,38034.35,5.8,Blanditiis aliquam eius eaque cum sapiente ab.
+PM-000224,ME-00077,Patient Monitor,24947.0,Myanga Nursing HomeAnnex,Bungoma,2025-08-13,Inspection,Bearing inspection,Sifuna Mwangi,2.2,23178.03,1.95,Nisi quo numquam sapiente error ratione.
+PM-000225,ME-00077,Patient Monitor,24947.0,Myanga Nursing HomeAnnex,Bungoma,2025-10-17,Corrective Maintenance,Filter replacement,Ms Zipporah Anyango,6.86,49411.63,3.84,Vero maxime ratione cum molestiae.
+PM-000226,ME-00077,Patient Monitor,24947.0,Myanga Nursing HomeAnnex,Bungoma,2025-06-25,Component Replacement,General inspection,Beatrice Mbatha,0.87,40803.68,0.08,Ex eos veniam nulla labore natus.
+PM-000227,ME-00077,Patient Monitor,24947.0,Myanga Nursing HomeAnnex,Bungoma,2026-03-23,Corrective Maintenance,Pump inspection,John Rutto,3.59,28110.89,1.12,Dolores odit ullam doloribus aliquam suscipit fugit.
+PM-000228,ME-00078,Patient Monitor,24475.0,The HARC Medical Centre,Nyandarua,2026-04-26,Inspection,Bearing inspection,Brenda Wamalwa,6.24,11699.0,1.48,Ad maxime quo maiores magni.
+PM-000229,ME-00078,Patient Monitor,24475.0,The HARC Medical Centre,Nyandarua,2025-08-29,Corrective Maintenance,Pump inspection,Purity Maingi,3.62,0.0,0.0,Maiores veniam cumque vero modi ab.
+PM-000230,ME-00078,Patient Monitor,24475.0,The HARC Medical Centre,Nyandarua,2024-10-05,Corrective Maintenance,Software diagnostics,Carolyne Munyoki,2.27,0.0,1.62,Saepe dignissimos repudiandae soluta qui ipsa.
+PM-000231,ME-00079,Hemodialysis,15795.0,Alupe Sub County Referral Hospital,Busia,2026-05-12,Preventive Maintenance,Bearing inspection,Rael Atieno,4.67,42875.92,1.39,Quaerat alias asperiores debitis dolorum architecto reprehenderit.
+PM-000232,ME-00079,Hemodialysis,15795.0,Alupe Sub County Referral Hospital,Busia,2026-07-24,Corrective Maintenance,General inspection,Naomi Cherono,3.88,49770.02,3.54,Inventore accusantium perferendis modi odit nulla.
+PM-000233,ME-00079,Hemodialysis,15795.0,Alupe Sub County Referral Hospital,Busia,2026-03-26,Inspection,Cooling system inspection,Edward Nkatha,2.19,15058.12,0.39,Facere magnam enim placeat.
+PM-000234,ME-00079,Hemodialysis,15795.0,Alupe Sub County Referral Hospital,Busia,2025-11-30,Corrective Maintenance,Cooling system inspection,Lilian Chepkemboi,2.96,61735.1,3.79,Hic optio labore modi consequatur hic.
+PM-000235,ME-00079,Hemodialysis,15795.0,Alupe Sub County Referral Hospital,Busia,2026-04-27,Corrective Maintenance,General inspection,Bishop Alex Kiarie,2.77,0.0,3.33,Perspiciatis totam recusandae quas fuga.
+PM-000236,ME-00080,Ventilator,14321.0,Chemolingot District Hospital,Baringo,2024-08-24,Inspection,General inspection,Nicholus Abdi,7.29,4336.2,2.32,A nisi modi.
+PM-000237,ME-00080,Ventilator,14321.0,Chemolingot District Hospital,Baringo,2024-10-21,Corrective Maintenance,Software diagnostics,Lucy Kigen,4.07,0.0,3.69,Distinctio temporibus sed consequuntur delectus nulla.
+PM-000238,ME-00080,Ventilator,14321.0,Chemolingot District Hospital,Baringo,2025-02-28,Component Replacement,Cooling system inspection,Sharon Oloo,4.8,49873.95,5.77,Sequi sed ut voluptatibus itaque mollitia enim.
+PM-000239,ME-00080,Ventilator,14321.0,Chemolingot District Hospital,Baringo,2024-10-07,Calibration,Electrical inspection,Sharon Kimanzi,7.47,34317.67,3.36,Veritatis explicabo perferendis doloremque eligendi architecto deserunt.
+PM-000240,ME-00081,Patient Monitor,24284.0,Latest Medical Center,Meru,2025-08-28,Component Replacement,General inspection,Evans Wanjiru,0.97,26222.16,2.44,Corrupti necessitatibus repellat vero cumque et quos quae.
+PM-000241,ME-00081,Patient Monitor,24284.0,Latest Medical Center,Meru,2025-12-26,Component Replacement,Bearing inspection,Prof Mourine Hassan,5.42,28870.2,1.3,Soluta iure facere esse mollitia cupiditate.
+PM-000242,ME-00081,Patient Monitor,24284.0,Latest Medical Center,Meru,2025-11-30,Preventive Maintenance,Filter replacement,Loise Ngatia,4.78,7089.04,1.25,Tempora deserunt quasi occaecati.
+PM-000243,ME-00081,Patient Monitor,24284.0,Latest Medical Center,Meru,2026-03-04,Preventive Maintenance,Cooling system inspection,Racheal Gichuhi,4.38,0.0,0.0,Adipisci neque illo nihil temporibus mollitia molestiae voluptatum.
+PM-000244,ME-00082,Ventilator,24929.0,Mediheal Hospital (Nakuru) Annex,Nakuru,2025-08-17,Inspection,Pump inspection,Njoki Wanyonyi,6.3,55398.52,3.6,Tempora nihil similique consequatur magnam.
+PM-000245,ME-00082,Ventilator,24929.0,Mediheal Hospital (Nakuru) Annex,Nakuru,2024-10-25,Preventive Maintenance,Filter replacement,Hon Florence Lagat,5.16,26437.02,3.36,Placeat quidem consequuntur culpa necessitatibus natus sit corporis.
+PM-000246,ME-00083,Anesthesia,15647.0,St Joseph Hospital,Narok,2026-03-07,Calibration,General inspection,Wycliff Mwangi,1.57,39733.04,3.77,Doloremque eaque doloremque pariatur maxime recusandae harum.
+PM-000247,ME-00083,Anesthesia,15647.0,St Joseph Hospital,Narok,2026-07-29,Component Replacement,Pump inspection,Ismael Mwangi,6.89,38659.65,3.02,Aut voluptas odio earum quia neque.
+PM-000248,ME-00083,Anesthesia,15647.0,St Joseph Hospital,Narok,2025-11-01,Corrective Maintenance,Sensor calibration,Catherine Kiptoo,5.47,38329.12,2.91,Officiis saepe maxime fugiat tenetur maiores explicabo sint.
+PM-000249,ME-00083,Anesthesia,15647.0,St Joseph Hospital,Narok,2025-08-29,Inspection,Electrical inspection,Fr Riziki Otieno,6.24,10886.59,5.24,Ipsam dolorem maiores eligendi.
+PM-000250,ME-00084,Hemodialysis,20383.0,Radiant Group of Hospital (Kiambu),Kiambu,2024-12-10,Component Replacement,Sensor calibration,Jane Ndirangu,6.45,0.0,2.43,Optio impedit ex beatae.
+PM-000251,ME-00084,Hemodialysis,20383.0,Radiant Group of Hospital (Kiambu),Kiambu,2026-01-22,Component Replacement,Sensor calibration,Antony Kipruto,2.52,15049.41,1.39,Ad aliquam nemo cum occaecati aliquam.
+PM-000252,ME-00084,Hemodialysis,20383.0,Radiant Group of Hospital (Kiambu),Kiambu,2025-11-03,Inspection,Filter replacement,Faith Njuguna,6.84,36578.59,0.0,Maxime illo voluptas odit.
+PM-000253,ME-00084,Hemodialysis,20383.0,Radiant Group of Hospital (Kiambu),Kiambu,2026-06-29,Calibration,Electrical inspection,Elias Deng,6.77,64002.25,0.0,Dolor non iusto laboriosam.
+PM-000254,ME-00085,Ultrasound,10512.0,Kenol Hospital,Muranga,2025-02-02,Inspection,Cooling system inspection,Pastor Njoroge Nyokabi,0.59,38101.48,1.24,Numquam magni cumque placeat.
+PM-000255,ME-00085,Ultrasound,10512.0,Kenol Hospital,Muranga,2026-08-02,Component Replacement,Cooling system inspection,Stanley Maina,2.04,31824.43,3.59,Harum autem dicta similique magnam in.
+PM-000256,ME-00085,Ultrasound,10512.0,Kenol Hospital,Muranga,2024-12-10,Component Replacement,Cooling system inspection,David Bett,6.45,20292.37,0.27,Nobis soluta minus quibusdam at optio temporibus molestiae.
+PM-000257,ME-00085,Ultrasound,10512.0,Kenol Hospital,Muranga,2024-08-16,Calibration,Filter replacement,Pastor Kamau Chepkoech,2.6,23326.1,5.05,Possimus inventore vel.
+PM-000258,ME-00086,Hemodialysis,14586.0,Iten County Referral Hospital,Elgeyo Marakwet,2025-08-25,Calibration,Sensor calibration,Pastor Isaac Wario,1.58,14457.28,5.14,Atque consequatur labore doloremque similique eligendi soluta.
+PM-000259,ME-00087,Ultrasound,18832.0,Karatina Maternity & Nursing Home,Kirinyaga,2025-06-29,Preventive Maintenance,Cooling system inspection,Ruth Nyawira,2.36,61940.06,4.0,Neque blanditiis ab.
+PM-000260,ME-00087,Ultrasound,18832.0,Karatina Maternity & Nursing Home,Kirinyaga,2026-01-06,Component Replacement,Pump inspection,Monicah Karanja,4.16,16263.97,5.16,Autem incidunt nesciunt ea modi natus.
+PM-000261,ME-00087,Ultrasound,18832.0,Karatina Maternity & Nursing Home,Kirinyaga,2025-12-04,Component Replacement,General inspection,Maimuna Kiprotich,4.22,0.0,4.86,Impedit quos laboriosam fuga mollitia.
+PM-000262,ME-00088,CT,10539.0,Kiambu County Referal Hospital,Kiambu,2025-03-01,Inspection,Pump inspection,Millicent Osoro,3.23,68646.75,4.53,Quasi sequi omnis quibusdam ipsum praesentium.
+PM-000263,ME-00088,CT,10539.0,Kiambu County Referal Hospital,Kiambu,2024-12-19,Corrective Maintenance,Bearing inspection,Caroline Kipkoech,3.73,21362.11,5.18,Reiciendis nostrum placeat amet harum odio.
+PM-000264,ME-00089,CT,12867.0,Aga Khan Hospital,Nairobi,2026-05-02,Inspection,Electrical inspection,Naomy Kiprono,7.92,61165.62,2.26,Ipsa aperiam dolore aspernatur alias fugit voluptates nostrum.
+PM-000265,ME-00089,CT,12867.0,Aga Khan Hospital,Nairobi,2025-09-24,Corrective Maintenance,General inspection,Rosemary Sang,4.34,17186.99,3.07,Odit ipsa dicta omnis.
+PM-000266,ME-00089,CT,12867.0,Aga Khan Hospital,Nairobi,2026-05-02,Inspection,Bearing inspection,Vincent Mohamed,2.3,29075.31,4.88,Magni praesentium nostrum perferendis facere omnis voluptate assumenda.
+PM-000267,ME-00089,CT,12867.0,Aga Khan Hospital,Nairobi,2025-03-18,Corrective Maintenance,General inspection,Pastor Isaac Ngugi,6.06,30932.18,2.3,Dicta accusamus provident ullam mollitia quas nam nesciunt.
+PM-000268,ME-00090,Anesthesia,18852.0,Lumboka Medical Services,Bungoma,2025-05-12,Preventive Maintenance,Software diagnostics,Hon Victor Ekidor,2.38,36825.25,0.94,Ut nemo ea illum autem asperiores eos.
+PM-000269,ME-00090,Anesthesia,18852.0,Lumboka Medical Services,Bungoma,2024-11-14,Corrective Maintenance,Software diagnostics,Bishop Zablon Muthuri,5.13,16405.66,2.4,Dolorum ipsam fugiat laborum doloribus excepturi quod.
+PM-000270,ME-00091,MRI,15915.0,Kakamega County General Hospital,Kakamega,2026-01-27,Inspection,Pump inspection,Kuria Muindi,2.68,20747.65,3.01,Blanditiis architecto odio voluptatibus perspiciatis dolorem et.
+PM-000271,ME-00091,MRI,15915.0,Kakamega County General Hospital,Kakamega,2025-05-17,Inspection,Pump inspection,Hillary Nkatha,1.47,35352.51,0.62,Dolorum at perferendis reprehenderit asperiores.
+PM-000272,ME-00091,MRI,15915.0,Kakamega County General Hospital,Kakamega,2026-08-09,Component Replacement,General inspection,Joan Awuor,2.59,37505.87,2.12,Eaque veniam placeat tenetur libero dicta quasi.
+PM-000273,ME-00091,MRI,15915.0,Kakamega County General Hospital,Kakamega,2026-06-24,Inspection,Bearing inspection,Lucy Achieng,4.87,27967.08,0.79,Saepe explicabo quod blanditiis aspernatur.
+PM-000274,ME-00091,MRI,15915.0,Kakamega County General Hospital,Kakamega,2026-01-13,Preventive Maintenance,General inspection,Wanjiku Jerop,6.58,40785.53,2.28,Vero sed fuga et tempore sunt nemo.
+PM-000275,ME-00092,Ventilator,14379.0,Cherangany Sub County Hospital,Trans Nzoia,2025-03-17,Component Replacement,Cooling system inspection,Mohamed Jerop,7.15,25034.27,0.71,Eligendi dolore nemo amet reiciendis laboriosam molestiae.
+PM-000276,ME-00092,Ventilator,14379.0,Cherangany Sub County Hospital,Trans Nzoia,2025-09-10,Inspection,Software diagnostics,Rev Rukia Hamisi,5.24,41514.79,6.31,Voluptate praesentium itaque porro accusamus distinctio neque.
+PM-000277,ME-00092,Ventilator,14379.0,Cherangany Sub County Hospital,Trans Nzoia,2025-04-25,Inspection,Filter replacement,Prof Ruth Kibet,5.91,26909.06,1.07,Iusto nostrum facilis libero distinctio.
+PM-000278,ME-00092,Ventilator,14379.0,Cherangany Sub County Hospital,Trans Nzoia,2026-02-11,Corrective Maintenance,Software diagnostics,Rev Ali Kipkoech,1.93,42305.58,4.57,Debitis consectetur nemo dolorem aut earum doloremque.
+PM-000279,ME-00093,CT,13110.0,Nairobi Hospital,Nairobi,2025-07-17,Inspection,Bearing inspection,Pastor Dennis Muthama,1.66,33063.39,0.57,Labore ab in consequatur.
+PM-000280,ME-00093,CT,13110.0,Nairobi Hospital,Nairobi,2026-07-10,Inspection,Pump inspection,Bishop Bonface Karanja,7.51,30288.3,0.0,Error natus necessitatibus id porro animi repellendus.
+PM-000281,ME-00095,MRI,10903.0,Nyeri Provincial General Hospital (PGH),Nyeri,2025-08-21,Preventive Maintenance,Software diagnostics,Dr Ian Langat,3.64,24482.6,5.77,Facere nam repellat exercitationem illum expedita.
+PM-000282,ME-00095,MRI,10903.0,Nyeri Provincial General Hospital (PGH),Nyeri,2026-01-25,Component Replacement,Bearing inspection,Emmanuel Muiruri,4.97,42194.56,1.78,Cupiditate quos explicabo perferendis laborum qui suscipit.
+PM-000283,ME-00095,MRI,10903.0,Nyeri Provincial General Hospital (PGH),Nyeri,2025-06-07,Calibration,Cooling system inspection,Vincent Cherop,3.14,18605.49,1.29,Sit odit unde in.
+PM-000284,ME-00096,MRI,12004.0,Embu Provincial General Hospital,Embu,2025-12-04,Corrective Maintenance,General inspection,Amos William,5.34,33615.12,0.9,Cum dolorem et eos.
+PM-000285,ME-00096,MRI,12004.0,Embu Provincial General Hospital,Embu,2025-03-11,Inspection,Software diagnostics,Rashid Macharia,5.35,28871.64,1.52,Quos vel quibusdam maxime ipsum cumque.
+PM-000286,ME-00096,MRI,12004.0,Embu Provincial General Hospital,Embu,2026-06-10,Inspection,Cooling system inspection,Esther Adan,4.96,13795.21,3.47,Velit praesentium aspernatur cumque aut.
+PM-000287,ME-00098,Anesthesia,10083.0,Central Memorial Hospital,Kiambu,2024-10-04,Component Replacement,Cooling system inspection,Benjamin Mohamed,3.47,31936.64,5.38,Minima voluptatum aut nulla assumenda ut.
+PM-000288,ME-00098,Anesthesia,10083.0,Central Memorial Hospital,Kiambu,2025-06-14,Preventive Maintenance,Cooling system inspection,Christine Njau,7.19,17937.62,3.1,Occaecati consectetur saepe adipisci optio similique.
+PM-000289,ME-00099,Anesthesia,25045.0,Mwai Kibaki Teaching and Referral Hospital,Nyeri,2025-04-25,Inspection,Sensor calibration,Fr Maina Mahat,7.65,61324.49,2.56,Molestias consequatur veniam molestiae nihil.
+PM-000290,ME-00099,Anesthesia,25045.0,Mwai Kibaki Teaching and Referral Hospital,Nyeri,2025-08-05,Inspection,Pump inspection,Mohammed Thuranira,4.37,47624.02,0.95,Minima odit est expedita molestiae rem.
+PM-000291,ME-00099,Anesthesia,25045.0,Mwai Kibaki Teaching and Referral Hospital,Nyeri,2025-07-25,Component Replacement,Software diagnostics,Cynthia Njuguna,6.77,0.0,2.67,Ab minima quis consequatur enim.
+PM-000292,ME-00100,Ultrasound,23860.0,Dokatah Nursing Home,Kwale,2025-10-05,Calibration,Pump inspection,Monicah Mohamud,6.16,35182.53,3.82,Error quisquam reiciendis nisi reiciendis molestias deleniti.
+PM-000293,ME-00100,Ultrasound,23860.0,Dokatah Nursing Home,Kwale,2026-07-02,Component Replacement,Software diagnostics,Nicholas Adhiambo,4.5,0.0,6.84,Repudiandae dolore aspernatur numquam maxime reiciendis.
+PM-000294,ME-00100,Ultrasound,23860.0,Dokatah Nursing Home,Kwale,2025-12-05,Preventive Maintenance,General inspection,Hon Vincent Daniel,3.05,13155.07,1.96,Impedit sequi delectus enim odio.
+PM-000295,ME-00100,Ultrasound,23860.0,Dokatah Nursing Home,Kwale,2025-12-08,Component Replacement,Electrical inspection,Francis Makau,1.52,12602.53,1.15,Eum corrupti voluptas ad voluptas.
+PM-000296,ME-00101,X-Ray,23681.0,Ichuky Medical Centre,Trans Nzoia,2025-03-23,Calibration,Cooling system inspection,Esther Wachira,3.02,24973.92,4.19,Doloremque corrupti laudantium.
+PM-000297,ME-00101,X-Ray,23681.0,Ichuky Medical Centre,Trans Nzoia,2025-05-08,Component Replacement,Sensor calibration,Prof Annah Awino,2.07,51072.76,3.8,Iure recusandae ex sapiente veritatis animi.
+PM-000298,ME-00101,X-Ray,23681.0,Ichuky Medical Centre,Trans Nzoia,2026-04-10,Component Replacement,Bearing inspection,Ms Halima Kariuki,4.79,30920.16,3.74,Repellendus repudiandae commodi quisquam dolorum.
+PM-000299,ME-00101,X-Ray,23681.0,Ichuky Medical Centre,Trans Nzoia,2026-04-07,Corrective Maintenance,Electrical inspection,Wanjiru Onyiego,0.5,40394.27,1.3,Itaque quo maxime voluptatem labore.
+PM-000300,ME-00101,X-Ray,23681.0,Ichuky Medical Centre,Trans Nzoia,2026-01-27,Calibration,Pump inspection,Lorna Wanjiku,7.26,41825.16,1.54,Quia mollitia commodi.
+PM-000301,ME-00102,Hemodialysis,13540.0,Ekerenyo Sub-District Hospital,Nyamira,2025-08-24,Calibration,General inspection,Simon Nyongesa,2.12,36156.88,1.69,Sint dolor beatae.
+PM-000302,ME-00102,Hemodialysis,13540.0,Ekerenyo Sub-District Hospital,Nyamira,2025-12-20,Corrective Maintenance,Sensor calibration,Hon Mary Nyokabi,7.36,31095.89,4.57,Blanditiis ratione ab aliquam quos labore nisi fuga.
+PM-000303,ME-00102,Hemodialysis,13540.0,Ekerenyo Sub-District Hospital,Nyamira,2024-10-24,Component Replacement,General inspection,Jane Ali,3.13,26882.65,1.09,Excepturi voluptas quis animi explicabo culpa modi autem.
+PM-000304,ME-00102,Hemodialysis,13540.0,Ekerenyo Sub-District Hospital,Nyamira,2025-08-29,Corrective Maintenance,Pump inspection,Susan Wanyama,0.81,23902.82,4.31,Rem ipsa deserunt porro facere consequatur.
+PM-000305,ME-00102,Hemodialysis,13540.0,Ekerenyo Sub-District Hospital,Nyamira,2026-07-15,Inspection,General inspection,Janet Wachira,4.07,0.0,2.37,Molestiae laudantium necessitatibus molestiae eum.
+PM-000306,ME-00103,Ventilator,12142.0,Kalacha Sub County Referral Hospital (Chalbi),Marsabit,2025-08-14,Corrective Maintenance,Cooling system inspection,Rahab Sang,2.9,17224.01,2.93,Cum minus ipsum reprehenderit molestiae iste quod.
+PM-000307,ME-00103,Ventilator,12142.0,Kalacha Sub County Referral Hospital (Chalbi),Marsabit,2025-09-12,Inspection,Electrical inspection,Dr Priscilla Joseph,6.15,42517.47,2.06,Quod dolores quam omnis molestiae harum.
+PM-000308,ME-00103,Ventilator,12142.0,Kalacha Sub County Referral Hospital (Chalbi),Marsabit,2025-09-27,Preventive Maintenance,Cooling system inspection,Shadrack Wainaina,3.53,10557.36,3.08,Eligendi illum eum atque omnis aliquam vel debitis.
+PM-000309,ME-00104,X-Ray,14721.0,Kapkoi Health Centre,Elgeyo Marakwet,2024-09-09,Component Replacement,Filter replacement,Sharon Akinyi,3.18,5797.18,5.1,Necessitatibus saepe omnis.
+PM-000310,ME-00104,X-Ray,14721.0,Kapkoi Health Centre,Elgeyo Marakwet,2025-09-28,Corrective Maintenance,Sensor calibration,Bernard Cheruiyot,2.17,33974.07,2.6,Dolore quaerat accusamus ullam omnis unde.
+PM-000311,ME-00105,MRI,12867.0,Aga Khan Hospital,Nairobi,2026-05-24,Component Replacement,Software diagnostics,Dorcas Kipkemoi,5.56,12052.0,0.63,Nam vel impedit fuga provident reprehenderit.
+PM-000312,ME-00105,MRI,12867.0,Aga Khan Hospital,Nairobi,2025-03-10,Component Replacement,Software diagnostics,Joseph Maina,4.14,23388.63,1.35,Aspernatur dolor maxime aut doloremque.
+PM-000313,ME-00106,Hemodialysis,12110.0,Jordan Hospital,Kitui,2025-06-11,Corrective Maintenance,Bearing inspection,Ruth Abdalla,3.29,19707.07,3.08,Numquam debitis quibusdam impedit autem odit facere.
+PM-000314,ME-00106,Hemodialysis,12110.0,Jordan Hospital,Kitui,2025-08-07,Preventive Maintenance,Software diagnostics,Wambua Onsongo,6.94,22230.54,3.89,Recusandae mollitia magnam omnis.
+PM-000315,ME-00106,Hemodialysis,12110.0,Jordan Hospital,Kitui,2025-10-04,Corrective Maintenance,General inspection,Jackson Awuor,3.2,41630.02,0.0,Mollitia voluptatum sapiente impedit odio repudiandae.
+PM-000316,ME-00106,Hemodialysis,12110.0,Jordan Hospital,Kitui,2025-04-24,Corrective Maintenance,Electrical inspection,Kevin Mutisya,1.12,33906.21,3.65,Quisquam unde ducimus vitae ipsum id.
+PM-000317,ME-00107,CT,15204.0,Moi Teaching Refferal Hospital,Uasin Gishu,2026-03-03,Preventive Maintenance,Software diagnostics,Flora Musa,5.44,13489.45,1.56,Consequatur tempora ab voluptates dolor et quo.
+PM-000318,ME-00107,CT,15204.0,Moi Teaching Refferal Hospital,Uasin Gishu,2026-02-02,Corrective Maintenance,General inspection,Hon Kemboi Kosgei,7.8,28695.53,0.0,Unde culpa alias explicabo consequuntur facilis neque.
+PM-000319,ME-00108,Ventilator,11170.0,Wangige Sub County Hospital,Kiambu,2025-02-12,Component Replacement,Electrical inspection,Silvia Ali,1.83,30067.76,4.73,Necessitatibus dolor aspernatur eveniet laboriosam laborum.
+PM-000320,ME-00108,Ventilator,11170.0,Wangige Sub County Hospital,Kiambu,2026-07-15,Corrective Maintenance,Software diagnostics,Lewis Nelima,0.79,34496.98,1.52,Nisi error quasi nemo.
+PM-000321,ME-00108,Ventilator,11170.0,Wangige Sub County Hospital,Kiambu,2024-10-15,Preventive Maintenance,Cooling system inspection,Mr Nicodemus Langat,2.46,31966.32,3.82,Impedit sint sit dolorem officiis nobis.
+PM-000322,ME-00108,Ventilator,11170.0,Wangige Sub County Hospital,Kiambu,2024-08-24,Preventive Maintenance,Electrical inspection,Nyongesa Mwendwa,3.2,54181.02,2.01,Minima eum natus eveniet possimus.
+PM-000323,ME-00108,Ventilator,11170.0,Wangige Sub County Hospital,Kiambu,2024-12-12,Calibration,Bearing inspection,Moraa Saitoti,3.26,16060.08,0.51,Quidem nemo at inventore ratione corporis excepturi.
+PM-000324,ME-00109,MRI,14947.0,Kitale County Hospital,Trans Nzoia,2025-08-20,Preventive Maintenance,Software diagnostics,Osman Cheptoo,3.12,35229.74,4.32,Assumenda magnam quo consectetur consequatur.
+PM-000325,ME-00109,MRI,14947.0,Kitale County Hospital,Trans Nzoia,2025-10-24,Corrective Maintenance,General inspection,Janet Maingi,5.85,14954.58,1.76,Natus voluptatum minima doloribus eaque.
+PM-000326,ME-00110,Ventilator,12799.0,St. John of God Hospital Tigania,Meru,2025-07-16,Corrective Maintenance,Pump inspection,Ms Sharon Kirui,7.01,24328.86,0.0,Expedita eum nisi ad esse voluptates.
+PM-000327,ME-00110,Ventilator,12799.0,St. John of God Hospital Tigania,Meru,2025-12-07,Preventive Maintenance,Electrical inspection,Fr Nelson Irungu,7.46,46168.46,2.38,Dicta fugiat quidem sequi beatae.
+PM-000328,ME-00110,Ventilator,12799.0,St. John of God Hospital Tigania,Meru,2024-09-27,Corrective Maintenance,Bearing inspection,Jepchumba Chepkemboi,4.66,0.0,2.26,Accusamus possimus beatae ipsum ad.
+PM-000329,ME-00110,Ventilator,12799.0,St. John of God Hospital Tigania,Meru,2025-01-25,Component Replacement,Electrical inspection,Jacob Achieng,1.2,30109.22,0.0,Quibusdam molestias numquam voluptatibus possimus pariatur fugiat.
+PM-000330,ME-00111,Ventilator,19280.0,St Louis Community Hospital,Nairobi,2026-07-20,Corrective Maintenance,Electrical inspection,Onyango Cheruiyot,5.88,26054.05,0.0,Eligendi ratione nulla amet.
+PM-000331,ME-00111,Ventilator,19280.0,St Louis Community Hospital,Nairobi,2026-01-06,Calibration,Pump inspection,Mercy Tanui,2.1,18870.48,4.3,Sint accusantium sint officiis doloremque fugit.
+PM-000332,ME-00111,Ventilator,19280.0,St Louis Community Hospital,Nairobi,2026-02-18,Preventive Maintenance,Bearing inspection,Sheilah Njenga,0.99,26076.16,0.96,Minus delectus magnam itaque unde accusantium dolorum minus.
+PM-000333,ME-00112,Ventilator,14455.0,Endebess Sub-County Hospital,Trans Nzoia,2025-05-02,Corrective Maintenance,Bearing inspection,Martin Atieno,0.76,24335.48,0.53,Placeat explicabo esse voluptatum voluptatem eius.
+PM-000334,ME-00112,Ventilator,14455.0,Endebess Sub-County Hospital,Trans Nzoia,2024-10-03,Component Replacement,Electrical inspection,Michael Chege,0.8,67676.25,1.15,Velit veniam dolorem.
+PM-000335,ME-00112,Ventilator,14455.0,Endebess Sub-County Hospital,Trans Nzoia,2025-05-08,Calibration,Pump inspection,Dr Mercy Mwendwa,6.76,33359.15,0.1,Sit placeat impedit nemo incidunt est non ipsum.
+PM-000336,ME-00113,Hemodialysis,13365.0,Hulugho Sub County Hospital,Garissa,2024-11-26,Calibration,Sensor calibration,Monica Mueni,4.73,14050.06,3.16,Similique est provident minima consequatur.
+PM-000337,ME-00113,Hemodialysis,13365.0,Hulugho Sub County Hospital,Garissa,2026-07-23,Component Replacement,Cooling system inspection,Eng Muthoni Kipchumba,7.84,0.0,3.75,Et nam veniam blanditiis.
+PM-000338,ME-00114,Anesthesia,13831.0,Muhoroni County Hospital,Kisumu,2025-04-19,Component Replacement,General inspection,Eng Elias Issak,2.79,13942.96,2.34,Vero esse quia reprehenderit odio qui.
+PM-000339,ME-00114,Anesthesia,13831.0,Muhoroni County Hospital,Kisumu,2024-12-12,Corrective Maintenance,Electrical inspection,Prof James Kariuki,7.19,19477.53,1.83,Nulla non nostrum nisi doloremque ad aspernatur quod.
+PM-000340,ME-00114,Anesthesia,13831.0,Muhoroni County Hospital,Kisumu,2024-11-28,Calibration,Electrical inspection,Augustine Chepkirui,1.94,16719.22,5.12,Delectus harum labore cum dolorem illum.
+PM-000341,ME-00115,Hemodialysis,13924.0,Nyangena Sub District Hospital (Manga),Nyamira,2024-08-27,Calibration,Pump inspection,Jeptoo Kimani,6.23,14778.39,1.45,Quidem architecto unde voluptates sint.
+PM-000342,ME-00115,Hemodialysis,13924.0,Nyangena Sub District Hospital (Manga),Nyamira,2025-08-31,Corrective Maintenance,Sensor calibration,Evans Nyaga,5.66,4161.31,4.75,Incidunt quod non repudiandae quam.
+PM-000343,ME-00116,CT,15204.0,Moi Teaching Refferal Hospital,Uasin Gishu,2025-06-18,Calibration,Bearing inspection,Wycliff Opiyo,2.31,19807.5,3.26,Minima soluta ratione maxime iste repudiandae aliquam.
+PM-000344,ME-00116,CT,15204.0,Moi Teaching Refferal Hospital,Uasin Gishu,2025-02-22,Preventive Maintenance,Filter replacement,Jacob Chepkwemoi,7.63,37209.75,3.11,Nam maiores occaecati.
+PM-000345,ME-00117,CT,13703.0,Kisii Teaching And Referral Hospital (Level 6),Kisii,2024-09-23,Corrective Maintenance,Software diagnostics,Joyce Kiprotich,4.13,12196.33,3.19,Quo enim cumque eos ullam.
+PM-000346,ME-00117,CT,13703.0,Kisii Teaching And Referral Hospital (Level 6),Kisii,2026-02-02,Component Replacement,Cooling system inspection,Makau Chepkorir,2.37,48529.03,4.81,At magnam debitis nesciunt tempora molestias hic.
+PM-000347,ME-00119,Ventilator,15288.0,Nakuru Provincial General Hospital,Nakuru,2025-04-24,Calibration,Electrical inspection,Joseph Kimutai,2.35,0.0,0.0,Sunt at eum officiis quae.
+PM-000348,ME-00119,Ventilator,15288.0,Nakuru Provincial General Hospital,Nakuru,2024-12-21,Component Replacement,Filter replacement,Barasa Ali,6.69,40440.83,1.65,Odio assumenda provident quas voluptate nostrum cum.
+PM-000349,ME-00119,Ventilator,15288.0,Nakuru Provincial General Hospital,Nakuru,2025-10-17,Preventive Maintenance,Pump inspection,Mrs Mildred Ogeto,6.49,35036.64,2.52,Sit sint cum corporis quisquam amet est.
+PM-000350,ME-00119,Ventilator,15288.0,Nakuru Provincial General Hospital,Nakuru,2026-03-06,Component Replacement,General inspection,Fr Alex Kariuki,5.06,32926.53,2.75,Vero a quisquam accusamus.
+PM-000351,ME-00119,Ventilator,15288.0,Nakuru Provincial General Hospital,Nakuru,2025-09-06,Calibration,Bearing inspection,Fr Andrew Otieno,6.0,51084.42,3.29,Dolores nihil labore illum aspernatur nobis doloribus.
+PM-000352,ME-00120,Ventilator,10782.0,Muriranjas Sub-District Hospital,Muranga,2025-10-15,Inspection,Pump inspection,Nelly Wanyama,4.18,24078.95,2.68,Aliquid corporis officiis alias sequi.
+PM-000353,ME-00120,Ventilator,10782.0,Muriranjas Sub-District Hospital,Muranga,2026-01-16,Corrective Maintenance,Bearing inspection,Noor Koech,6.23,43439.88,1.49,Aliquid impedit debitis perferendis.
+PM-000354,ME-00120,Ventilator,10782.0,Muriranjas Sub-District Hospital,Muranga,2025-12-03,Component Replacement,Pump inspection,Derrick Musa,5.29,24064.05,2.67,Debitis iste neque ut at error fuga.
+PM-000355,ME-00120,Ventilator,10782.0,Muriranjas Sub-District Hospital,Muranga,2025-06-06,Corrective Maintenance,Filter replacement,Dr Okoth Wayua,3.98,29329.79,1.15,Eos consequatur possimus earum.
+PM-000356,ME-00121,MRI,10903.0,Nyeri Provincial General Hospital (PGH),Nyeri,2025-09-29,Calibration,Bearing inspection,Sis Lucy Muthoni,4.74,0.0,3.31,Autem quas occaecati voluptates.
+PM-000357,ME-00121,MRI,10903.0,Nyeri Provincial General Hospital (PGH),Nyeri,2025-08-26,Corrective Maintenance,Filter replacement,Mutuku Wanga,2.67,35483.09,3.51,Incidunt sed ea nemo numquam.
+PM-000358,ME-00121,MRI,10903.0,Nyeri Provincial General Hospital (PGH),Nyeri,2026-08-06,Corrective Maintenance,Pump inspection,Yvonne Kipkorir,4.76,10559.81,4.01,Libero repellat sunt doloremque enim deserunt blanditiis iure.
+PM-000359,ME-00121,MRI,10903.0,Nyeri Provincial General Hospital (PGH),Nyeri,2026-04-26,Calibration,Filter replacement,Rachael Muthoni,3.86,32588.42,0.8,Voluptatum impedit ex nam odit accusamus dicta eligendi.
+PM-000360,ME-00121,MRI,10903.0,Nyeri Provincial General Hospital (PGH),Nyeri,2026-04-21,Corrective Maintenance,Software diagnostics,Eunice Murithi,2.84,33828.79,8.23,Quisquam beatae ex id necessitatibus vero.
+PM-000361,ME-00122,Hemodialysis,15498.0,Roret Sub-District Hospital,Kericho,2026-05-24,Corrective Maintenance,Pump inspection,Ruth Charles,1.41,24822.6,1.36,Totam reiciendis officia laboriosam occaecati tempora modi.
+PM-000362,ME-00122,Hemodialysis,15498.0,Roret Sub-District Hospital,Kericho,2025-05-03,Calibration,Software diagnostics,Kipkoech Mwende,7.42,47540.02,3.37,Rerum error quam et.
+PM-000363,ME-00123,Hemodialysis,12289.0,Kibunga Sub-District Hospital,Tharaka Nithi,2025-10-06,Preventive Maintenance,Software diagnostics,Lucy Bakari,2.07,0.0,1.94,Architecto corrupti sapiente excepturi fugiat modi.
+PM-000364,ME-00123,Hemodialysis,12289.0,Kibunga Sub-District Hospital,Tharaka Nithi,2024-12-22,Calibration,Electrical inspection,Kariuki Akinyi,7.67,10859.17,5.25,Sint quibusdam provident et.
+PM-000365,ME-00123,Hemodialysis,12289.0,Kibunga Sub-District Hospital,Tharaka Nithi,2024-09-09,Inspection,Electrical inspection,Irene Kipkorir,4.27,38585.53,7.07,Fuga repudiandae esse minima cupiditate.
+PM-000366,ME-00124,Patient Monitor,10829.0,Ndaragwa Health Centre,Nyandarua,2025-06-02,Calibration,Cooling system inspection,Mr Nyongesa Mawira,3.65,2541.29,4.35,Magni reiciendis temporibus culpa excepturi laboriosam.
+PM-000367,ME-00124,Patient Monitor,10829.0,Ndaragwa Health Centre,Nyandarua,2026-06-25,Calibration,Pump inspection,Otieno Wekesa,3.58,16628.43,2.85,Reprehenderit vel perspiciatis consequatur.
+PM-000368,ME-00124,Patient Monitor,10829.0,Ndaragwa Health Centre,Nyandarua,2026-03-01,Corrective Maintenance,Sensor calibration,Lydia Maiyo,3.12,25132.21,2.56,Blanditiis est aliquid sed sit ex suscipit.
+PM-000369,ME-00124,Patient Monitor,10829.0,Ndaragwa Health Centre,Nyandarua,2024-11-04,Component Replacement,Sensor calibration,Derick Oketch,1.08,0.0,5.86,Neque est tempora.
+PM-000370,ME-00124,Patient Monitor,10829.0,Ndaragwa Health Centre,Nyandarua,2025-04-22,Corrective Maintenance,Sensor calibration,Ruth Wanjala,0.54,46323.64,3.1,Quo perferendis earum culpa beatae vero.
+PM-000371,ME-00125,Patient Monitor,13401.0,Malkamari Health Centre (Malkamari),Mandera,2025-10-24,Calibration,Filter replacement,James Musyoki,3.46,3993.22,0.0,Et consequuntur provident eligendi doloribus architecto nostrum.
+PM-000372,ME-00125,Patient Monitor,13401.0,Malkamari Health Centre (Malkamari),Mandera,2025-05-06,Inspection,Pump inspection,Jackson Hassan,3.59,46366.3,1.47,Temporibus amet fugit assumenda hic provident tempora.
+PM-000373,ME-00125,Patient Monitor,13401.0,Malkamari Health Centre (Malkamari),Mandera,2025-12-17,Component Replacement,Cooling system inspection,Fr Omar Rotich,1.33,0.0,0.0,Quae perferendis modi voluptate quidem.
+PM-000374,ME-00126,Patient Monitor,24571.0,Maroatora Nursing Home,Migori,2025-08-12,Inspection,General inspection,Daniel Simon,0.89,6130.46,5.12,Atque est officia quisquam iusto veniam corporis.
+PM-000375,ME-00126,Patient Monitor,24571.0,Maroatora Nursing Home,Migori,2026-07-12,Preventive Maintenance,Electrical inspection,Michael Cherotich,6.01,36241.56,3.71,Praesentium pariatur ratione sunt.
+PM-000376,ME-00126,Patient Monitor,24571.0,Maroatora Nursing Home,Migori,2025-08-03,Inspection,Software diagnostics,Joseph Bett,3.89,11104.15,0.0,Laboriosam sapiente eligendi expedita nemo magni.
+PM-000377,ME-00126,Patient Monitor,24571.0,Maroatora Nursing Home,Migori,2025-06-27,Inspection,Bearing inspection,Dr Evans Makori,6.88,30756.33,1.86,Minus id impedit nulla molestias.
+PM-000378,ME-00126,Patient Monitor,24571.0,Maroatora Nursing Home,Migori,2025-08-25,Component Replacement,Filter replacement,Ms Rose Abdille,5.63,42621.02,1.99,Inventore voluptatem necessitatibus exercitationem possimus cupiditate pariatur qui.
+PM-000379,ME-00127,Anesthesia,10782.0,Muriranjas Sub-District Hospital,Muranga,2026-02-19,Corrective Maintenance,Cooling system inspection,Yahya Onyango,0.78,37698.27,4.03,Iure nam reprehenderit debitis veritatis architecto autem repellendus.
+PM-000380,ME-00127,Anesthesia,10782.0,Muriranjas Sub-District Hospital,Muranga,2026-04-07,Corrective Maintenance,Pump inspection,Pastor Evans Gatwiri,0.92,42801.95,4.06,At repellendus suscipit temporibus.
+PM-000381,ME-00128,X-Ray,21810.0,Pemah Nursing and Maternity Home,Siaya,2025-12-23,Corrective Maintenance,Sensor calibration,Mr Albert Tanui,7.78,16861.08,1.71,Minus harum neque deserunt placeat et necessitatibus.
+PM-000382,ME-00128,X-Ray,21810.0,Pemah Nursing and Maternity Home,Siaya,2026-07-26,Preventive Maintenance,Sensor calibration,George Nafula,6.5,27867.88,2.79,Quaerat totam voluptatibus nesciunt nostrum magni.
+PM-000383,ME-00128,X-Ray,21810.0,Pemah Nursing and Maternity Home,Siaya,2026-06-05,Calibration,Filter replacement,Neema Maina,6.12,41802.58,5.44,Voluptas a nam voluptatem autem eligendi adipisci.
+PM-000384,ME-00128,X-Ray,21810.0,Pemah Nursing and Maternity Home,Siaya,2025-07-17,Component Replacement,General inspection,Allan Mwanzia,1.68,2526.32,4.89,Illo ipsa distinctio cupiditate consequuntur nam.
+PM-000385,ME-00129,Ultrasound,22053.0,Agakhan Medical Centre-Busia,Busia,2026-06-02,Preventive Maintenance,Cooling system inspection,Rev Jane Saitoti,0.77,66644.92,3.28,Consequatur asperiores accusamus quam.
+PM-000386,ME-00129,Ultrasound,22053.0,Agakhan Medical Centre-Busia,Busia,2025-08-29,Corrective Maintenance,Filter replacement,Nicholas Mutungi,1.16,60045.27,0.02,Consequatur rem similique tempora.
+PM-000387,ME-00129,Ultrasound,22053.0,Agakhan Medical Centre-Busia,Busia,2026-02-07,Preventive Maintenance,Cooling system inspection,Jimmy Kendi,1.7,1945.29,4.37,Magni mollitia ipsum explicabo delectus non neque.
+PM-000388,ME-00129,Ultrasound,22053.0,Agakhan Medical Centre-Busia,Busia,2026-06-04,Inspection,Pump inspection,Moses John,6.36,0.0,4.26,Unde nemo alias alias laboriosam fuga.
+PM-000389,ME-00129,Ultrasound,22053.0,Agakhan Medical Centre-Busia,Busia,2025-11-09,Corrective Maintenance,Software diagnostics,Kipkurui Ochieng,0.52,41145.6,1.44,Voluptates voluptates quod iure aspernatur suscipit at.
+PM-000390,ME-00130,Ultrasound,15181.0,Meteitei Sub-District Hospital,Nandi,2025-08-17,Corrective Maintenance,Software diagnostics,Mutinda Richard,7.69,16235.19,0.0,Placeat molestiae neque nostrum.
+PM-000391,ME-00130,Ultrasound,15181.0,Meteitei Sub-District Hospital,Nandi,2026-07-18,Corrective Maintenance,Sensor calibration,Sis Lydiah Chepkirui,6.13,19874.8,5.32,Temporibus nemo ex explicabo voluptate eos cumque.
+PM-000392,ME-00131,Anesthesia,10162.0,Eddiana Hospital,Kiambu,2026-02-06,Preventive Maintenance,Sensor calibration,Mohammed Njue,3.51,33487.16,0.0,Ea occaecati neque nemo omnis eos qui.
+PM-000393,ME-00131,Anesthesia,10162.0,Eddiana Hospital,Kiambu,2024-09-06,Preventive Maintenance,Filter replacement,Janet Juma,1.73,54289.25,3.04,Sed eius consequatur eligendi.
+PM-000394,ME-00131,Anesthesia,10162.0,Eddiana Hospital,Kiambu,2026-06-13,Calibration,Software diagnostics,Mary Onyango,6.38,14713.68,6.72,Tenetur qui omnis fuga.
+PM-000395,ME-00132,Patient Monitor,17111.0,Mashambani Health Centre,Kisumu,2024-12-30,Inspection,Sensor calibration,Victoria Adan,1.43,42301.43,2.67,Reiciendis similique exercitationem assumenda.
+PM-000396,ME-00132,Patient Monitor,17111.0,Mashambani Health Centre,Kisumu,2024-12-06,Calibration,General inspection,Ndirangu Atieno,4.38,41583.67,2.38,Quidem impedit fugit optio quas cumque neque.
+PM-000397,ME-00132,Patient Monitor,17111.0,Mashambani Health Centre,Kisumu,2026-05-31,Component Replacement,Pump inspection,Mrs Judy Wangeci,4.49,0.0,4.81,Amet iure labore labore.
+PM-000398,ME-00133,X-Ray,14040.0,Ratta Health Centre,Kisumu,2026-03-23,Inspection,Cooling system inspection,Moses James,7.51,10480.82,1.08,Labore corporis sit accusamus unde ipsum.
+PM-000399,ME-00133,X-Ray,14040.0,Ratta Health Centre,Kisumu,2026-01-25,Inspection,Sensor calibration,Sis Josphine Mwangi,4.02,38354.01,3.82,Odit vero inventore ullam similique ex eaque.
+PM-000400,ME-00133,X-Ray,14040.0,Ratta Health Centre,Kisumu,2024-10-31,Calibration,General inspection,Monica Waweru,4.93,34474.4,1.12,Quasi nihil deserunt excepturi porro.
+PM-000401,ME-00133,X-Ray,14040.0,Ratta Health Centre,Kisumu,2025-01-02,Calibration,General inspection,Sis Mary Otieno,4.46,20337.24,1.88,Accusamus atque aut ipsum.
+PM-000402,ME-00133,X-Ray,14040.0,Ratta Health Centre,Kisumu,2025-02-02,Preventive Maintenance,Sensor calibration,Vincent Wafula,2.1,41162.06,0.96,Nulla animi nisi.
+PM-000403,ME-00134,CT,13346.0,Garissa County Referral Hospital,Garissa,2026-07-11,Inspection,Electrical inspection,Prof Nduku Mutiso,2.12,81650.05,1.58,Assumenda non fugiat quisquam.
+PM-000404,ME-00134,CT,13346.0,Garissa County Referral Hospital,Garissa,2026-01-01,Inspection,Cooling system inspection,Mwendwa Kariuki,5.12,32604.85,5.37,Possimus ducimus iure vel.
+PM-000405,ME-00135,Ventilator,11381.0,Galana Hospital,Kilifi,2025-12-25,Corrective Maintenance,Software diagnostics,Mutiso Wanjala,7.74,4271.33,4.1,Porro pariatur quo ducimus quos eius.
+PM-000406,ME-00135,Ventilator,11381.0,Galana Hospital,Kilifi,2024-10-03,Component Replacement,General inspection,Rev Jackline Odhiambo,0.99,7718.57,4.61,Debitis architecto voluptatem dicta hic.
+PM-000407,ME-00136,Patient Monitor,22591.0,Cheptobot,Trans Nzoia,2025-12-30,Component Replacement,Filter replacement,James Momanyi,3.64,40966.29,3.24,Dolor officia totam quaerat aut asperiores.
+PM-000408,ME-00136,Patient Monitor,22591.0,Cheptobot,Trans Nzoia,2025-11-02,Corrective Maintenance,Sensor calibration,Wanjiru Kemboi,3.24,12285.11,5.43,Corrupti odit ut optio eaque praesentium temporibus.
+PM-000409,ME-00136,Patient Monitor,22591.0,Cheptobot,Trans Nzoia,2025-11-05,Preventive Maintenance,Cooling system inspection,Maureen Bor,2.28,4877.19,2.44,Laboriosam illo quas repellat architecto dolorem fugit.
+PM-000410,ME-00136,Patient Monitor,22591.0,Cheptobot,Trans Nzoia,2026-02-02,Calibration,General inspection,Fr Samuel Katana,1.37,26688.19,1.65,Ex esse animi voluptatum officia facilis.
+PM-000411,ME-00136,Patient Monitor,22591.0,Cheptobot,Trans Nzoia,2026-06-09,Preventive Maintenance,Cooling system inspection,Ms Belinda Kamande,4.37,3979.46,1.52,Officia debitis aliquam fugit deleniti.
+PM-000412,ME-00137,Ventilator,15081.0,Lopiding Sub County Hospital,Turkana,2026-02-07,Calibration,Bearing inspection,Ms Doreen Nyongesa,6.05,67163.99,1.63,Suscipit ipsa deleniti alias.
+PM-000413,ME-00137,Ventilator,15081.0,Lopiding Sub County Hospital,Turkana,2024-09-04,Component Replacement,Electrical inspection,Rono Mutua,6.07,6787.87,4.35,Aperiam molestiae est modi rerum ipsum.
+PM-000414,ME-00137,Ventilator,15081.0,Lopiding Sub County Hospital,Turkana,2024-08-28,Calibration,Electrical inspection,Rose Chepkemoi,7.0,40686.57,2.33,Illo distinctio omnis.
+PM-000415,ME-00137,Ventilator,15081.0,Lopiding Sub County Hospital,Turkana,2025-09-26,Calibration,General inspection,Rama Kalume,6.95,34186.89,1.14,Corrupti neque unde alias consequuntur officiis iusto.
+PM-000416,ME-00139,CT,25045.0,Mwai Kibaki Teaching and Referral Hospital,Nyeri,2026-07-30,Preventive Maintenance,Filter replacement,Peter Nkatha,5.31,59841.43,1.9,Accusamus odio temporibus reprehenderit.
+PM-000417,ME-00139,CT,25045.0,Mwai Kibaki Teaching and Referral Hospital,Nyeri,2024-10-30,Inspection,Software diagnostics,Christopher Muteti,0.57,18799.51,1.55,Repellendus autem libero reiciendis.
+PM-000418,ME-00139,CT,25045.0,Mwai Kibaki Teaching and Referral Hospital,Nyeri,2025-02-03,Corrective Maintenance,Filter replacement,Ivy Auma,4.59,49750.33,0.99,Eveniet voluptate nemo consequatur saepe recusandae.
+PM-000419,ME-00139,CT,25045.0,Mwai Kibaki Teaching and Referral Hospital,Nyeri,2026-04-01,Preventive Maintenance,General inspection,Anne Chepkemoi,3.16,39943.07,3.05,Earum quidem cumque fuga.
+PM-000420,ME-00140,MRI,13346.0,Garissa County Referral Hospital,Garissa,2024-12-22,Preventive Maintenance,Software diagnostics,Kevin Njagi,3.46,1940.01,3.11,Aut sed nostrum quod.
+PM-000421,ME-00140,MRI,13346.0,Garissa County Referral Hospital,Garissa,2024-08-28,Corrective Maintenance,Software diagnostics,Brian Otieno,4.04,12984.57,0.91,Provident nisi eligendi possimus.
+PM-000422,ME-00140,MRI,13346.0,Garissa County Referral Hospital,Garissa,2026-04-23,Corrective Maintenance,Pump inspection,Fr Derrick Muthoni,6.4,40886.75,0.9,Minima illum vel nostrum alias.
+PM-000423,ME-00140,MRI,13346.0,Garissa County Referral Hospital,Garissa,2025-01-02,Calibration,Bearing inspection,Shadrack Musee,6.15,7102.58,1.85,Repudiandae error in nam deleniti voluptates voluptate nulla.
+PM-000424,ME-00140,MRI,13346.0,Garissa County Referral Hospital,Garissa,2026-06-17,Corrective Maintenance,Cooling system inspection,Bishop Joel Chepkorir,6.31,33179.25,4.13,Omnis eius deserunt recusandae placeat voluptas labore debitis.
+PM-000425,ME-00141,Ventilator,19237.0,Mutuati Catholic Hospital,Meru,2026-01-18,Component Replacement,General inspection,Faith Cherotich,3.24,9750.7,2.32,Ipsa ex rem quis aliquam.
+PM-000426,ME-00141,Ventilator,19237.0,Mutuati Catholic Hospital,Meru,2026-03-14,Inspection,Electrical inspection,Jeruto Njeri,3.63,41653.71,3.03,Laborum blanditiis tempora.
+PM-000427,ME-00141,Ventilator,19237.0,Mutuati Catholic Hospital,Meru,2026-02-27,Inspection,Bearing inspection,Wambui Wekesa,4.83,32046.62,0.45,Quia tempore dolorem beatae dolorem.
+PM-000428,ME-00142,Ventilator,15565.0,Sigor Sub-District Hospital,Bomet,2025-02-16,Calibration,General inspection,Hassan Achieng,6.24,23248.92,4.13,Asperiores nesciunt amet ipsa dolor.
+PM-000429,ME-00142,Ventilator,15565.0,Sigor Sub-District Hospital,Bomet,2025-12-02,Preventive Maintenance,Filter replacement,Mohamed Korir,1.62,44742.19,2.9,Quam odio voluptate dicta consectetur porro animi.
+PM-000430,ME-00143,Ventilator,24143.0,Tenwek Hospital Annex-Bomet,Bomet,2024-11-30,Component Replacement,Electrical inspection,Neema Nyaga,7.28,42495.11,3.71,Quis dolore eos culpa.
+PM-000431,ME-00143,Ventilator,24143.0,Tenwek Hospital Annex-Bomet,Bomet,2026-04-25,Inspection,Electrical inspection,Njiru Kadzo,1.42,13200.42,2.71,Voluptas sequi assumenda sequi laudantium voluptatum nihil.
+PM-000432,ME-00143,Ventilator,24143.0,Tenwek Hospital Annex-Bomet,Bomet,2026-05-28,Component Replacement,Pump inspection,Charles Jepkoech,2.92,23688.88,0.0,Dolorum ipsa dolore unde veniam.
+PM-000433,ME-00143,Ventilator,24143.0,Tenwek Hospital Annex-Bomet,Bomet,2026-07-26,Component Replacement,Software diagnostics,Anderson Kioko,3.28,29144.71,0.0,Aliquam iusto quisquam.
+PM-000434,ME-00144,Ventilator,10154.0,Vineyard Hospital,Kiambu,2024-09-11,Corrective Maintenance,Software diagnostics,Sis Sarah Jerotich,7.19,15629.07,0.56,Iste dolores nam accusamus.
+PM-000435,ME-00145,Patient Monitor,23559.0,The Nairobi Hospital Warwick Outpatient Center,Nairobi,2026-03-07,Inspection,Sensor calibration,Eng Esther Koech,3.74,0.0,3.17,Accusamus pariatur cum itaque.
+PM-000436,ME-00145,Patient Monitor,23559.0,The Nairobi Hospital Warwick Outpatient Center,Nairobi,2025-11-02,Calibration,Cooling system inspection,Edward Wechuli,7.14,30254.54,0.64,Quo soluta illo ratione fuga iure odio.
+PM-000437,ME-00145,Patient Monitor,23559.0,The Nairobi Hospital Warwick Outpatient Center,Nairobi,2026-06-15,Component Replacement,Software diagnostics,Brian Mutindi,0.54,22135.67,2.57,Minus eos quidem praesentium nostrum nemo.
+PM-000438,ME-00145,Patient Monitor,23559.0,The Nairobi Hospital Warwick Outpatient Center,Nairobi,2025-01-23,Calibration,Software diagnostics,Dr Mutua Chepkemoi,1.82,4196.4,2.36,Maiores tenetur facilis amet.
+PM-000439,ME-00146,Patient Monitor,14366.0,Cheptalal Sub-County Hospital,Bomet,2025-06-09,Corrective Maintenance,Software diagnostics,Pastor Nelly Wanyonyi,0.8,15329.28,1.24,Officia provident natus quo.
+PM-000440,ME-00146,Patient Monitor,14366.0,Cheptalal Sub-County Hospital,Bomet,2024-12-01,Corrective Maintenance,General inspection,Eng Abigael Makori,2.49,20011.09,4.83,Sit praesentium quidem quis eum tempore magnam in.
+PM-000441,ME-00146,Patient Monitor,14366.0,Cheptalal Sub-County Hospital,Bomet,2024-09-27,Inspection,Electrical inspection,Cynthia Kimutai,7.9,28628.08,4.56,Minima commodi quae perspiciatis minus eos numquam.
+PM-000442,ME-00146,Patient Monitor,14366.0,Cheptalal Sub-County Hospital,Bomet,2026-04-29,Inspection,Filter replacement,Muthui Michael,7.6,27561.39,2.38,Deleniti sunt assumenda hic.
+PM-000443,ME-00146,Patient Monitor,14366.0,Cheptalal Sub-County Hospital,Bomet,2025-01-01,Calibration,Software diagnostics,Vallary Ochieng,1.72,36050.38,2.79,Eius possimus libero soluta.
+PM-000444,ME-00147,Ventilator,23523.0,Bliss Medical Centre,Kirinyaga,2025-09-24,Calibration,Bearing inspection,John Kioko,3.59,39719.15,4.87,Ut labore in qui accusantium deleniti ad.
+PM-000445,ME-00147,Ventilator,23523.0,Bliss Medical Centre,Kirinyaga,2026-04-30,Component Replacement,Pump inspection,Stacy Okumu,7.27,35026.41,2.0,Illum exercitationem officia eveniet nihil possimus.
+PM-000446,ME-00147,Ventilator,23523.0,Bliss Medical Centre,Kirinyaga,2026-05-31,Corrective Maintenance,Sensor calibration,Samwel Omar,6.56,9385.24,3.64,Tempore esse ratione dolorem.
+PM-000447,ME-00147,Ventilator,23523.0,Bliss Medical Centre,Kirinyaga,2025-05-31,Component Replacement,General inspection,Celestine Mwangi,3.05,53450.2,2.36,Eligendi vero nulla cum modi delectus.
+PM-000448,ME-00148,Ventilator,11757.0,Riflot Medical Centre,Taita Taveta,2024-12-30,Calibration,Bearing inspection,Eng Kelvin Onyango,7.05,21009.23,3.13,Nemo ipsam fuga dignissimos provident pariatur.
+PM-000449,ME-00148,Ventilator,11757.0,Riflot Medical Centre,Taita Taveta,2025-05-10,Preventive Maintenance,Sensor calibration,Cynthia Wamalwa,1.51,26523.36,0.22,Modi commodi ad ut.
+PM-000450,ME-00148,Ventilator,11757.0,Riflot Medical Centre,Taita Taveta,2026-04-04,Inspection,Filter replacement,Hildah Muthike,6.06,36920.73,0.77,A qui voluptate ex.
+PM-000451,ME-00149,Ventilator,14511.0,Gilgil Military Regional Hospital,Nakuru,2026-02-14,Calibration,General inspection,Joan Wairimu,4.45,26852.1,0.0,Pariatur reiciendis quas ullam excepturi beatae laboriosam.
+PM-000452,ME-00150,Hemodialysis,15946.0,Kima Mission Hospital,Vihiga,2024-09-16,Inspection,Filter replacement,Everlyne Onyango,2.32,36842.11,0.48,Illo sapiente ipsum.
+PM-000453,ME-00150,Hemodialysis,15946.0,Kima Mission Hospital,Vihiga,2024-10-26,Corrective Maintenance,Bearing inspection,Mrs Kemunto Wafula,4.83,23178.53,3.63,Dolore vel eius ad modi ipsum perferendis.
+PM-000454,ME-00150,Hemodialysis,15946.0,Kima Mission Hospital,Vihiga,2024-10-22,Calibration,Cooling system inspection,Martin Kiprop,3.38,49882.05,0.05,Non velit tenetur facere corporis sequi fuga fuga.
