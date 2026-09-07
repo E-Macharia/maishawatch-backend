@@ -73,8 +73,8 @@ def seed_default_admin():
                 None,
                 1,
                 now,
-                None,
-                0
+                now,
+                1
             ))
             print(f"✅ Default admin created: {email} / {password}")
     except Exception as e:

@@ -112,12 +112,12 @@ def login_oauth2(
 
     print(f"✅ Login successful for: {form_data.username}")
 
-    # Check if first time login
+    # Check if first time login (system administrators bypass OTP for direct OAuth2/Swagger access)
     is_first_time = (
         user_dict["last_login"] is None and user_dict.get("temp_password_used", 0) == 0
     )
 
-    if is_first_time:
+    if is_first_time and user_dict.get("role") != "system_administrator":
         # For first time login, return a special response
         # The OAuth2 flow expects a token, so we'll return an error with instructions
         raise HTTPException(
