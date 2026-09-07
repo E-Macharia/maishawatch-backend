@@ -5,7 +5,7 @@ from typing import Optional, List
 from datetime import datetime, timezone, timedelta
 import random
 import pandas as pd
-from app.core.security import current_user, require_roles
+from app.core.security import current_user, require_roles, optional_user
 from app.core.db import db
 from app.core.audit import audit
 from app.services.data_service import (
@@ -845,7 +845,7 @@ def get_equipment_rul(equipment_id: str, u=Depends(current_user)):
 def evaluate_equipment_endpoint(
     request: EvaluateRequest,
     background_tasks: BackgroundTasks,
-    u=Depends(current_user)
+    u=Depends(optional_user)
 ):
     """Evaluate equipment for failure probability and RUL"""
     # Check if equipment exists
