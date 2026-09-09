@@ -30,6 +30,7 @@ from app.ml.risk_config import (
     FAILURE_CRITICAL_THRESHOLD,
 )
 from app.engines.alert_engine import build_recommendation
+from app.services.llm_service import LLMService
 
 logger = logging.getLogger(__name__)
 
@@ -377,7 +378,7 @@ class LanguageSupport:
 
 # --- Chat Service ---
 class ChatService:
-    """Main chat service handling all queries with multi-language support"""
+    """Main chat service handling all queries with LLM intelligence and multi-language support"""
 
     def __init__(self, user, language: str = "en"):
         self.user = user
@@ -386,9 +387,46 @@ class ChatService:
         self.scope_id = user.get("scope_id")
         self.equipment_list = scope_filter(equipment(), user)
         self.facilities_list = scope_filter(facilities(), user)
+        self.llm = LLMService()
 
-    def process_query(self, message: str) -> ChatResponse:
-        """Process user query and generate response with language support"""
+    def process_query(self, message: str, history: List[Dict] = None) -> ChatResponse:
+        """Process user query with LLM first, falling back to deterministic rules"""
+        # 1. Try LLM intelligence first with live system context
+        try:
+            with db() as c:
+                alert_row = c.execute("SELECT COUNT(*) as count FROM alerts WHERE status='OPEN'").fetchone()
+                crit_row = c.execute("SELECT COUNT(*) as count FROM alerts WHERE severity='CRITICAL' AND status!='RESOLVED'").fetchone()
+
+            llm_context = {
+                "user_name": self.user.get("name", "Caleb Munyeki"),
+                "role": self.user.get("role", "System Administrator"),
+                "scope_type": self.scope,
+                "equipment_count": len(self.equipment_list),
+                "facility_count": len(self.facilities_list),
+                "open_alerts": alert_row["count"] if alert_row else 0,
+                "critical_alerts": crit_row["count"] if crit_row else 0,
+            }
+
+            llm_result = self.llm.generate_response_sync(
+                message=message,
+                context=llm_context,
+                history=history,
+                language=self.language,
+            )
+
+            if llm_result and llm_result.get("response"):
+                return ChatResponse(
+                    response=llm_result["response"],
+                    action=llm_result.get("action", "general"),
+                    data=llm_result.get("data"),
+                    suggestions=llm_result.get("suggestions", LanguageSupport.get_suggestions(self.language)),
+                    conversation_id=f"chat_{datetime.now(timezone.utc).timestamp()}",
+                    timestamp=datetime.now(timezone.utc).isoformat(),
+                )
+        except Exception as e:
+            logger.warning(f"LLM generation failed, falling back to rule-based engine: {e}")
+
+        # 2. Rule-Based Fallback Engine
         intent = IntentDetector.detect_intent(message)
         equipment_id = IntentDetector.extract_equipment_id(message)
         facility_id = IntentDetector.extract_facility_id(message)
@@ -1123,9 +1161,12 @@ def chat(message: ChatMessage, u=Depends(optional_user)):
         # Save user message
         ChatMemory.add_message(conversation_id, "user", message.message)
 
-        # Process the query with language
+        # Retrieve recent history for LLM context
+        history = ChatMemory.get_conversation(conversation_id, limit=8)
+
+        # Process the query with LLM intelligence and language
         chat_service = ChatService(u, language)
-        response = chat_service.process_query(message.message)
+        response = chat_service.process_query(message.message, history=history)
 
         # Save assistant response
         ChatMemory.add_message(

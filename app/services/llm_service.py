@@ -1,23 +1,84 @@
 # app/services/llm_service.py
 import os
 import json
+import logging
 from typing import Optional, List, Dict, Any
 import httpx
-import logging
+from app.core.config import AI_API_KEY, AI_MODEL, AI_BASE_URL
 
 logger = logging.getLogger(__name__)
 
 
 class LLMService:
-    """Service for integrating with LLM APIs"""
+    """Service for integrating with LLM APIs (Groq, OpenAI, Claude)"""
 
     def __init__(self):
-        self.openai_api_key = os.getenv("OPENAI_API_KEY")
-        self.openai_model = os.getenv("OPENAI_MODEL", "gpt-4-turbo-preview")
-        self.claude_api_key = os.getenv("CLAUDE_API_KEY")
-        self.claude_model = os.getenv("CLAUDE_MODEL", "claude-3-opus-20240229")
-        self.use_openai = bool(self.openai_api_key)
-        self.use_claude = bool(self.claude_api_key)
+        self.api_key = os.getenv("AI_API_KEY") or os.getenv("GROQ_API_KEY") or os.getenv("OPENAI_API_KEY") or AI_API_KEY
+        self.model = os.getenv("AI_MODEL") or os.getenv("GROQ_MODEL") or AI_MODEL
+        self.base_url = os.getenv("AI_BASE_URL") or AI_BASE_URL
+        self.is_groq = bool(self.api_key and self.api_key.startswith("gsk_"))
+        self.is_claude = bool(self.api_key and self.api_key.startswith("sk-ant-"))
+
+    def generate_response_sync(
+        self,
+        message: str,
+        context: Dict[str, Any],
+        history: List[Dict] = None,
+        language: str = "en",
+    ) -> Optional[Dict[str, Any]]:
+        """Synchronous response generation using configured LLM"""
+        if not self.api_key:
+            return None
+
+        system_prompt = self._build_system_prompt(context, language)
+        messages = [{"role": "system", "content": system_prompt}]
+
+        if history:
+            for msg in history[-8:]:
+                role = "assistant" if msg.get("role") in ["assistant", "ai"] else "user"
+                content = msg.get("content", "")
+                if content:
+                    messages.append({"role": role, "content": content})
+
+        messages.append({"role": "user", "content": message})
+
+        # Try specified model first, with automatic fallbacks for Groq
+        candidate_models = [self.model]
+        if self.is_groq:
+            for fallback in ["groq/compound", "groq/compound-mini", "openai/gpt-oss-20b"]:
+                if fallback not in candidate_models:
+                    candidate_models.append(fallback)
+
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json",
+        }
+
+        with httpx.Client(timeout=30.0) as client:
+            for model_name in candidate_models:
+                try:
+                    payload = {
+                        "model": model_name,
+                        "messages": messages,
+                        "temperature": 0.6,
+                        "max_tokens": 1024,
+                    }
+                    resp = client.post(self.base_url, headers=headers, json=payload)
+                    if resp.status_code == 200:
+                        data = resp.json()
+                        content = data["choices"][0]["message"]["content"]
+                        return self._parse_llm_response(content)
+                    elif resp.status_code == 404:
+                        logger.warning(f"Model {model_name} not available (404), trying candidate fallback...")
+                        continue
+                    else:
+                        logger.error(f"LLM API error ({resp.status_code}): {resp.text}")
+                        break
+                except Exception as e:
+                    logger.error(f"LLM call failed with {model_name}: {e}")
+                    break
+
+        return None
 
     async def generate_response(
         self,
@@ -26,173 +87,86 @@ class LLMService:
         history: List[Dict] = None,
         language: str = "en",
     ) -> Dict[str, Any]:
-        """Generate response using LLM"""
-        if self.use_openai:
-            return await self._call_openai(message, context, history, language)
-        elif self.use_claude:
-            return await self._call_claude(message, context, history, language)
-        else:
-            # Fallback to rule-based response
-            return self._fallback_response(message, context)
-
-    async def _call_openai(
-        self, message: str, context: Dict, history: List[Dict], language: str
-    ) -> Dict:
-        """Call OpenAI API"""
-        system_prompt = self._build_system_prompt(context, language)
-
-        messages = [{"role": "system", "content": system_prompt}]
-
-        # Add history if available
-        if history:
-            for msg in history[-10:]:  # Last 10 messages for context
-                messages.append(
-                    {"role": msg.get("role", "user"), "content": msg.get("content", "")}
-                )
-
-        messages.append({"role": "user", "content": message})
-
-        async with httpx.AsyncClient() as client:
-            try:
-                response = await client.post(
-                    "https://api.openai.com/v1/chat/completions",
-                    headers={
-                        "Authorization": f"Bearer {self.openai_api_key}",
-                        "Content-Type": "application/json",
-                    },
-                    json={
-                        "model": self.openai_model,
-                        "messages": messages,
-                        "temperature": 0.7,
-                        "max_tokens": 1000,
-                        "response_format": {"type": "json_object"},
-                    },
-                    timeout=30.0,
-                )
-
-                if response.status_code == 200:
-                    result = response.json()
-                    content = result["choices"][0]["message"]["content"]
-                    return self._parse_llm_response(content)
-                else:
-                    logger.error(f"OpenAI API error: {response.text}")
-                    return self._fallback_response(message, context)
-
-            except Exception as e:
-                logger.error(f"OpenAI call failed: {e}")
-                return self._fallback_response(message, context)
-
-    async def _call_claude(
-        self, message: str, context: Dict, history: List[Dict], language: str
-    ) -> Dict:
-        """Call Claude API"""
-        system_prompt = self._build_system_prompt(context, language)
-
-        messages = []
-        if history:
-            for msg in history[-10:]:
-                messages.append(
-                    {"role": msg.get("role", "user"), "content": msg.get("content", "")}
-                )
-
-        messages.append({"role": "user", "content": message})
-
-        async with httpx.AsyncClient() as client:
-            try:
-                response = await client.post(
-                    "https://api.anthropic.com/v1/messages",
-                    headers={
-                        "x-api-key": self.claude_api_key,
-                        "anthropic-version": "2023-06-01",
-                        "Content-Type": "application/json",
-                    },
-                    json={
-                        "model": self.claude_model,
-                        "system": system_prompt,
-                        "messages": messages,
-                        "max_tokens": 1000,
-                        "temperature": 0.7,
-                    },
-                    timeout=30.0,
-                )
-
-                if response.status_code == 200:
-                    result = response.json()
-                    content = result["content"][0]["text"]
-                    return self._parse_llm_response(content)
-                else:
-                    logger.error(f"Claude API error: {response.text}")
-                    return self._fallback_response(message, context)
-
-            except Exception as e:
-                logger.error(f"Claude call failed: {e}")
-                return self._fallback_response(message, context)
+        """Async response generation with rule-based fallback"""
+        res = self.generate_response_sync(message, context, history, language)
+        if res:
+            return res
+        return self._fallback_response(message, context)
 
     def _build_system_prompt(self, context: Dict, language: str) -> str:
-        """Build system prompt for LLM"""
+        """Build rich domain system prompt for hospital equipment operations"""
         language_map = {"en": "English", "sw": "Swahili", "fr": "French"}
         lang_name = language_map.get(language, "English")
 
-        return f"""
-        You are MaishaWatch AI Assistant, a medical equipment management expert.
-        
-        Current Context:
-        - Role: {context.get('role', 'Unknown')}
-        - Scope: {context.get('scope_type', 'Unknown')}
-        - Equipment Count: {context.get('equipment_count', 0)}
-        - Facility Count: {context.get('facility_count', 0)}
-        - Language: {lang_name}
-        
-        Respond in {lang_name}.
-        
-        You help users with:
-        1. Equipment status and details
-        2. Failure predictions and RUL
-        3. Alert management
-        4. Maintenance recommendations
-        5. Reports and analytics
-        6. Operational guidance
-        
-        Format your response as JSON with:
-        - "response": The main response text
-        - "action": The action to take (equipment_status, prediction, alert, maintenance, report, etc.)
-        - "data": Any structured data to display
-        - "suggestions": List of follow-up suggestions
-        
-        Be concise, professional, and helpful.
-        """
+        return f"""You are MaishaWatch AI, an intelligent clinical engineering and hospital equipment monitoring assistant in Kenya.
+You have real-time visibility into biomedical equipment, failure predictions, Remaining Useful Life (RUL), and operational alerts.
 
-    def _parse_llm_response(self, content: str) -> Dict:
-        """Parse LLM response JSON"""
+Current System Context:
+- User: {context.get('user_name', 'Caleb Munyeki')} ({context.get('role', 'System Administrator')})
+- Scope: {context.get('scope_type', 'National Scope')} ({context.get('equipment_count', 150)} assets across {context.get('facility_count', 129)} facilities in Kenya).
+- Open Alerts: {context.get('open_alerts', 0)} active alerts ({context.get('critical_alerts', 0)} critical).
+- Language: Respond in {lang_name}.
+
+Response Instructions:
+1. Provide accurate, professional, and actionable biomedical maintenance guidance.
+2. If asked about equipment, failure risk, or alerts, answer authoritatively based on Kenya's healthcare context.
+3. Be concise and helpful. Prioritize clinical uptime and patient safety.
+4. Output JSON with the following structure:
+{{
+  "response": "<your conversational answer with markdown formatting>",
+  "action": "<general | equipment_status | prediction | alert | maintenance | report>",
+  "suggestions": ["<prompt 1>", "<prompt 2>", "<prompt 3>"]
+}}
+If unable to format as pure JSON, output your response directly as text.
+"""
+
+    def _parse_llm_response(self, content: str) -> Dict[str, Any]:
+        """Parse LLM output as JSON or extract response text"""
+        cleaned = content.strip()
+        if cleaned.startswith("```json"):
+            cleaned = cleaned[7:]
+        elif cleaned.startswith("```"):
+            cleaned = cleaned[3:]
+        if cleaned.endswith("```"):
+            cleaned = cleaned[:-3]
+        cleaned = cleaned.strip()
+
         try:
-            # Try to parse as JSON
-            result = json.loads(content)
-            # Ensure required fields
-            if "response" not in result:
-                result["response"] = content
-            if "action" not in result:
-                result["action"] = "general"
-            if "suggestions" not in result:
-                result["suggestions"] = []
-            return result
-        except json.JSONDecodeError:
-            # Fallback: wrap in expected format
-            return {
-                "response": content,
-                "action": "general",
-                "data": None,
-                "suggestions": [],
-            }
+            parsed = json.loads(cleaned)
+            if isinstance(parsed, dict) and "response" in parsed:
+                return {
+                    "response": parsed["response"],
+                    "action": parsed.get("action", "general"),
+                    "data": parsed.get("data"),
+                    "suggestions": parsed.get("suggestions", [
+                        "What equipment is due for maintenance?",
+                        "Show critical alerts",
+                        "Summary of all facilities",
+                    ]),
+                }
+        except Exception:
+            pass
+
+        return {
+            "response": content,
+            "action": "general",
+            "data": None,
+            "suggestions": [
+                "What equipment is due for maintenance?",
+                "Show critical alerts",
+                "Summary of all facilities",
+            ],
+        }
 
     def _fallback_response(self, message: str, context: Dict) -> Dict:
-        """Fallback rule-based response when LLM is unavailable"""
-        # Use the existing ChatService for fallback
-        from app.services.chat_service import ChatService
-
-        # This will be handled by the main chat service
+        """Fallback when LLM is offline"""
         return {
-            "response": "I'm currently using my base knowledge. For more advanced responses, please configure an LLM API key.",
+            "response": "I'm currently running in baseline monitoring mode. All equipment telemetry and alert systems remain fully active.",
             "action": "fallback",
             "data": {"using_llm": False},
-            "suggestions": ["Help", "Equipment status", "Alerts"],
+            "suggestions": [
+                "What's the status of all equipment?",
+                "Show me critical alerts",
+                "Predict failures for equipment",
+            ],
         }

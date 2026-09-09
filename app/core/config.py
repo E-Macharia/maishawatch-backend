@@ -18,3 +18,15 @@ SMTP_USERNAME = os.getenv('SMTP_USERNAME', 'watchmaisha@gmail.com',)
 SMTP_PASSWORD = os.getenv('SMTP_PASSWORD', 'jqvdoycqscjywxmi',)
 SMTP_FROM = os.getenv('SMTP_FROM', SMTP_USERNAME or 'watchmaisha@gmail.com',)
 SMTP_USE_TLS = os.getenv('SMTP_USE_TLS', 'true').lower() == 'true'
+
+# AI & LLM Configuration
+AI_API_KEY = os.getenv('AI_API_KEY') or os.getenv('GROQ_API_KEY') or os.getenv('OPENAI_API_KEY') or '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'
+AI_MODEL = os.getenv('AI_MODEL') or os.getenv('GROQ_MODEL') or 'llama-3.3-70b-versatile'
+AI_BASE_URL = os.getenv('AI_BASE_URL')
+if not AI_BASE_URL:
+    if AI_API_KEY and AI_API_KEY.startswith('gsk_'):
+        AI_BASE_URL = 'https://api.groq.com/openai/v1/chat/completions'
+    elif AI_API_KEY and AI_API_KEY.startswith('sk-ant-'):
+        AI_BASE_URL = 'https://api.anthropic.com/v1/messages'
+    else:
+        AI_BASE_URL = 'https://api.openai.com/v1/chat/completions'
