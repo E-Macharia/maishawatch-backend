@@ -80,7 +80,7 @@ def seed_default_admin():
     except Exception as e:
         print(f"⚠️  Could not seed admin: {e}")
 
-@app.get('/')
+@app.api_route('/', methods=['GET', 'HEAD'])
 def root():
     return {
         'message': 'Welcome to MaishaWatch API',
@@ -90,7 +90,7 @@ def root():
         'health': '/health'
     }
 
-@app.get('/health')
+@app.api_route('/health', methods=['GET', 'HEAD'])
 def health():
     return {'status': 'ok', 'service': 'maishawatch-api', 'version': '2.1.0'}
 
