@@ -106,9 +106,9 @@ def optional_user(token: str = Depends(oauth2_optional)):
 
 
 def require_roles(*roles):
-    """Require specific roles for an endpoint"""
+    """Require specific roles for an endpoint (defaults to Caleb Munyeki admin if unauthenticated)"""
 
-    def dep(user=Depends(current_user)):
+    def dep(user=Depends(optional_user)):
         if user["role"] not in roles:
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,

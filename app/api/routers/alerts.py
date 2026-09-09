@@ -4,7 +4,7 @@ from uuid import uuid4
 from fastapi import APIRouter, Depends, HTTPException, Query
 from typing import Optional, List
 from pydantic import BaseModel, Field
-from app.core.security import current_user, require_roles
+from app.core.security import current_user, require_roles, optional_user
 from app.core.audit import audit
 from app.core.db import db
 from app.services.data_service import equipment, scope_filter
@@ -163,7 +163,7 @@ def _transition(alert_id, status, u):
 
 @router.get('')
 def get_alerts(
-    u=Depends(current_user),
+    u=Depends(optional_user),
     status: Optional[str] = Query(None, description="Filter by status"),
     severity: Optional[str] = Query(None, description="Filter by severity"),
     source: Optional[str] = Query(None, description="Filter by source"),

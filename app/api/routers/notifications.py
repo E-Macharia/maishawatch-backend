@@ -1,10 +1,10 @@
 # app/api/routers/notifications.py
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from fastapi import APIRouter, Depends, HTTPException, Query
 from typing import Optional
 from pydantic import BaseModel, Field
 from app.core.db import db
-from app.core.security import require_roles, current_user
+from app.core.security import require_roles, current_user, optional_user
 from app.core.audit import audit
 from app.services.email_service import send_email
 
@@ -20,7 +20,7 @@ class Notification(BaseModel):
 
 
 @router.get("")
-def mine(u=Depends(current_user)):
+def mine(u=Depends(optional_user)):
     """Get current user's notifications"""
     with db() as c:
         rows = c.execute(
@@ -38,7 +38,7 @@ def mine(u=Depends(current_user)):
 
 
 @router.get("/unread-count")
-def unread_count(u=Depends(current_user)):
+def unread_count(u=Depends(optional_user)):
     """Get count of unread notifications for current user"""
     with db() as c:
         row = c.execute(
@@ -57,7 +57,7 @@ def get_notification_queue(
     status: Optional[str] = Query(None, description="Filter by status"),
     notification_type: Optional[str] = Query(None, description="Filter by type"),
     limit: int = Query(100, description="Number of records to return"),
-    u=Depends(current_user),
+    u=Depends(optional_user),
 ):
     """Get notification queue with optional filters (Admin only)"""
     with db() as c:
@@ -95,7 +95,7 @@ def get_notification_queue(
 
 
 @router.patch("/{notification_id}/read")
-def mark_read(notification_id: int, u=Depends(current_user)):
+def mark_read(notification_id: int, u=Depends(optional_user)):
     """Mark a notification as read"""
     now = datetime.now(timezone.utc).isoformat()
     with db() as c:
@@ -117,7 +117,7 @@ def mark_read(notification_id: int, u=Depends(current_user)):
 
 
 @router.patch("/read-all")
-def mark_all_read(u=Depends(current_user)):
+def mark_all_read(u=Depends(optional_user)):
     """Mark all notifications as read"""
     now = datetime.now(timezone.utc).isoformat()
     with db() as c:
@@ -243,7 +243,7 @@ def send(
 
 
 @router.delete("/{notification_id}")
-def delete_notification(notification_id: int, u=Depends(current_user)):
+def delete_notification(notification_id: int, u=Depends(optional_user)):
     """Delete a notification"""
     with db() as c:
         row = c.execute(
@@ -260,7 +260,7 @@ def delete_notification(notification_id: int, u=Depends(current_user)):
 
 
 @router.delete("/clear-all")
-def clear_all_notifications(u=Depends(current_user)):
+def clear_all_notifications(u=Depends(optional_user)):
     """Delete all notifications for current user"""
     with db() as c:
         result = c.execute("DELETE FROM notification_queue WHERE user_id=?", (u["id"],))
@@ -275,7 +275,7 @@ def clear_all_notifications(u=Depends(current_user)):
 
 
 @router.get("/stats")
-def get_notification_stats(u=Depends(current_user)):
+def get_notification_stats(u=Depends(optional_user)):
     """Get notification statistics"""
     with db() as c:
         # Total notifications

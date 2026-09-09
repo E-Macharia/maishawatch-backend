@@ -3,7 +3,7 @@ from uuid import uuid4
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 from app.core.db import db
-from app.core.security import current_user, require_roles
+from app.core.security import current_user, require_roles, optional_user
 from app.core.audit import audit
 from app.services.data_service import maintenance, equipment, scope_filter
 
@@ -14,12 +14,12 @@ class WorkOrderUpdate(BaseModel):
     status:str|None=None; assigned_to:str|None=None; priority:str|None=None; resolution:str|None=None; completed_at:str|None=None
 
 @router.get('')
-def list_work_orders(u=Depends(current_user)):
+def list_work_orders(u=Depends(optional_user)):
     with db() as c: rows=[dict(r) for r in c.execute('SELECT * FROM maintenance_work_orders ORDER BY created_at DESC').fetchall()]
     return rows if str(u['scope_type'])=='national' else [r for r in rows if str(r.get('facility_id'))==str(u['scope_id'])]
 
 @router.get('/history/{equipment_id}')
-def history(equipment_id:str,u=Depends(current_user)):
+def history(equipment_id:str,u=Depends(optional_user)):
     eq=[x for x in scope_filter(equipment(),u) if str(x.get('equipment_id'))==str(equipment_id)]
     if not eq: raise HTTPException(404,'Equipment not found or outside your access scope')
     rows=maintenance(equipment_id,facility_id=eq[0].get('facility_id')); audit(u,'VIEW_MAINTENANCE_HISTORY','equipment',equipment_id); return rows

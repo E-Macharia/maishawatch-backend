@@ -1,9 +1,9 @@
 # app/main.py
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import CORS_ORIGINS
 from app.core.db import db
-from app.core.security import hash_password
+from app.core.security import hash_password, optional_user
 from app.api.routers import (
     auth, users, facilities, equipment, maintenance, alerts,
     audit, notifications, reports, chat, dashboard,predictions,failure
@@ -93,3 +93,7 @@ def root():
 @app.get('/health')
 def health():
     return {'status': 'ok', 'service': 'maishawatch-api', 'version': '2.1.0'}
+
+@app.get('/analytics/summary', tags=['Dashboard'])
+def analytics_summary(u=Depends(optional_user)):
+    return dashboard.dashboard_summary(u)

@@ -63,7 +63,7 @@ def get_equipment(
     equipment_type: Optional[str] = Query(None, description="Filter by equipment type"),
     status: Optional[str] = Query(None, description="Filter by status"),
     search: Optional[str] = Query(None, description="Search by equipment_id or model"),
-    u=Depends(current_user),
+    u=Depends(optional_user),
 ):
     """Get all equipment with optional filters"""
     eq = scope_filter(equipment(), u)
@@ -102,7 +102,7 @@ def get_equipment_details(
     include_maintenance: bool = Query(True, description="Include maintenance history"),
     include_alerts: bool = Query(True, description="Include alerts"),
     limit: int = Query(50, description="Limit for telemetry and maintenance history"),
-    u=Depends(current_user),
+    u=Depends(optional_user),
 ):
     """Get detailed equipment information including telemetry, maintenance, and alerts"""
     eq_list = [
