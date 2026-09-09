@@ -4,7 +4,7 @@ from pydantic import BaseModel, EmailStr, Field
 from datetime import datetime, timezone, timedelta
 import secrets
 from app.core.db import db
-from app.core.security import verify_password, create_token, current_user, hash_password
+from app.core.security import verify_password, create_token, current_user, optional_user, hash_password
 from app.core.audit import audit
 from app.services.email_service import send_email
 from fastapi.security import OAuth2PasswordRequestForm
@@ -394,16 +394,16 @@ def change_password(x: PasswordChange, u=Depends(current_user)):
 
 
 @router.get("/me")
-def me(u=Depends(current_user)):
+def me(u=Depends(optional_user)):
     with db() as c:
         user = c.execute(
             "SELECT id, name, email, role, scope_type, scope_id, last_login, created_at FROM users WHERE id=?",
             (u["id"],),
         ).fetchone()
-    return dict(user)
+    return dict(user) if user else u
 
 
 @router.post("/logout")
-def logout(u=Depends(current_user)):
+def logout(u=Depends(optional_user)):
     audit(u, "LOGOUT", "auth", u["id"])
     return {"message": "Signed out"}

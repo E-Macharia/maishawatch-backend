@@ -1,7 +1,7 @@
 # app/api/routers/reports.py
 from fastapi import APIRouter, Depends, Query
 from datetime import datetime, timezone
-from app.core.security import current_user
+from app.core.security import current_user, optional_user
 from app.core.audit import audit
 from app.services.data_service import equipment, failures, scope_filter, facilities
 from app.core.db import db
@@ -10,7 +10,7 @@ router = APIRouter(prefix="/reports", tags=["Reports"])
 
 
 @router.get("/summary")
-def summary(u=Depends(current_user)):
+def summary(u=Depends(optional_user)):
     eq = scope_filter(equipment(), u)
     fs = scope_filter(facilities(), u)
 
@@ -38,7 +38,7 @@ def equipment_report(
     facility_id: str | None = None,
     equipment_type: str | None = None,
     status: str | None = None,
-    u=Depends(current_user),
+    u=Depends(optional_user),
 ):
     eq = scope_filter(equipment(), u)
 
@@ -79,7 +79,7 @@ def alerts_report(
     equipment_id: str | None = None,
     severity: str | None = None,
     status: str | None = None,
-    u=Depends(current_user),
+    u=Depends(optional_user),
 ):
     with db() as c:
         query = "SELECT * FROM alerts WHERE 1=1"

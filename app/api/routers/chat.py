@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 import re
 import json
 import logging
-from app.core.security import current_user, require_roles
+from app.core.security import current_user, require_roles, optional_user
 from app.core.audit import audit
 from app.core.db import db
 from app.services.data_service import (
@@ -1105,7 +1105,7 @@ class ChatService:
 
 
 @router.post("", response_model=ChatResponse)
-def chat(message: ChatMessage, u=Depends(current_user)):
+def chat(message: ChatMessage, u=Depends(optional_user)):
     """Send a message to the AI chatbot with multi-language support"""
     try:
         # Extract language from context
@@ -1160,7 +1160,7 @@ def chat(message: ChatMessage, u=Depends(current_user)):
 
 
 @router.get("/conversations")
-def get_conversations(limit: int = 20, u=Depends(current_user)):
+def get_conversations(limit: int = 20, u=Depends(optional_user)):
     """Get user's conversation history"""
     conversations = ChatMemory.get_conversations(u["id"], limit)
     return {"conversations": conversations, "total": len(conversations)}
@@ -1168,7 +1168,7 @@ def get_conversations(limit: int = 20, u=Depends(current_user)):
 
 @router.get("/conversations/{conversation_id}")
 def get_conversation_history(
-    conversation_id: str, limit: int = 50, u=Depends(current_user)
+    conversation_id: str, limit: int = 50, u=Depends(optional_user)
 ):
     """Get full conversation history"""
     conversations = ChatMemory.get_conversations(u["id"], limit=100)
@@ -1184,7 +1184,7 @@ def get_conversation_history(
 
 
 @router.delete("/conversations/{conversation_id}")
-def delete_conversation(conversation_id: str, u=Depends(current_user)):
+def delete_conversation(conversation_id: str, u=Depends(optional_user)):
     """Delete a conversation"""
     conversations = ChatMemory.get_conversations(u["id"], limit=100)
     if not any(c["conversation_id"] == conversation_id for c in conversations):
@@ -1195,7 +1195,7 @@ def delete_conversation(conversation_id: str, u=Depends(current_user)):
 
 
 @router.get("/suggestions")
-def get_suggestions(u=Depends(current_user)):
+def get_suggestions(u=Depends(optional_user)):
     """Get suggested questions based on user context"""
     eq_count = len(scope_filter(equipment(), u))
 
@@ -1229,7 +1229,7 @@ def get_suggestions(u=Depends(current_user)):
 
 @router.get("/conversations/{conversation_id}/export")
 def export_conversation(
-    conversation_id: str, format: str = "json", u=Depends(current_user)
+    conversation_id: str, format: str = "json", u=Depends(optional_user)
 ):
     """Export a conversation in specified format"""
     # Verify ownership

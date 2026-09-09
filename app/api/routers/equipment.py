@@ -722,7 +722,7 @@ def generate_telemetry_for_equipment(
 
 # --- GET Failure Prediction ---
 @router.get("/{equipment_id}/failure-prediction")
-def get_failure_prediction(equipment_id: str, u=Depends(current_user)):
+def get_failure_prediction(equipment_id: str, u=Depends(optional_user)):
     """Get failure prediction for equipment using telemetry data"""
     from app.engines.alert_engine import evaluate_equipment
 
@@ -776,7 +776,7 @@ def get_failure_prediction(equipment_id: str, u=Depends(current_user)):
 
 # --- GET RUL ---
 @router.get("/{equipment_id}/rul")
-def get_equipment_rul(equipment_id: str, u=Depends(current_user)):
+def get_equipment_rul(equipment_id: str, u=Depends(optional_user)):
     """Get Remaining Useful Life prediction for equipment"""
     from app.ml.predictor import predict_rul
 
@@ -917,7 +917,7 @@ def evaluate_equipment_endpoint(
 
 # --- POST Batch Telemetry Simulation ---
 @router.post("/simulate-batch")
-def simulate_batch_telemetry(request: TelemetryBatchRequest, u=Depends(current_user)):
+def simulate_batch_telemetry(request: TelemetryBatchRequest, u=Depends(optional_user)):
     """Generate simulated telemetry data for testing"""
     eq = [
         e for e in scope_filter(equipment(), u)
@@ -960,7 +960,7 @@ def simulate_batch_telemetry(request: TelemetryBatchRequest, u=Depends(current_u
 @router.get("/stats/summary")
 def get_equipment_stats(
     facility_id: Optional[str] = Query(None, description="Filter by facility"),
-    u=Depends(current_user),
+    u=Depends(optional_user),
 ):
     """Get equipment statistics summary"""
     eq = scope_filter(equipment(), u)
@@ -1009,7 +1009,7 @@ def get_equipment_telemetry_endpoint(
     facility_id: Optional[str] = Query(None, description="Filter by facility"),
     limit: int = Query(100, description="Number of records to return"),
     days: int = Query(7, description="Number of days to look back"),
-    u=Depends(current_user),
+    u=Depends(optional_user),
 ):
     """Get telemetry data for a specific equipment"""
     eq_list = [
@@ -1041,7 +1041,7 @@ def get_equipment_alerts(
     equipment_id: str,
     limit: int = Query(50, description="Number of alerts to return"),
     status: Optional[str] = Query(None, description="Filter by status"),
-    u=Depends(current_user),
+    u=Depends(optional_user),
 ):
     """Get alerts for a specific equipment"""
     eq_list = [

@@ -1,7 +1,7 @@
 # app/api/routers/profiles.py
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
-from app.core.security import current_user
+from app.core.security import current_user, optional_user
 from app.core.audit import audit
 from app.core.db import db
 
@@ -9,7 +9,7 @@ router = APIRouter(prefix="/profile", tags=["User Profile"])
 
 
 @router.get("")
-def get_profile(u=Depends(current_user)):
+def get_profile(u=Depends(optional_user)):
     with db() as c:
         user = c.execute(
             """
@@ -19,11 +19,11 @@ def get_profile(u=Depends(current_user)):
         """,
             (u["id"],),
         ).fetchone()
-    return dict(user)
+    return dict(user) if user else u
 
 
 @router.patch("")
-def update_profile(name: str, u=Depends(current_user)):
+def update_profile(name: str, u=Depends(optional_user)):
     with db() as c:
         c.execute("UPDATE users SET name=? WHERE id=?", (name, u["id"]))
         user = c.execute(
