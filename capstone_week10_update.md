@@ -1,6 +1,5 @@
 # Capstone Project Update - Week 10: Vibe Coding Integration
 
-**Student Name:** Evans Macharia  
 **Project Title:** MaishaWatch - Predictive Maintenance & Hospital Equipment Operations System  
 **Track:** Full-Stack & Applied Machine Learning  
 **Date:** September 2026  
