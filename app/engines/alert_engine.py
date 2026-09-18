@@ -322,6 +322,79 @@ def evaluate_facility_equipment(facility_id):
         "results": results,
     }
 
+# app/engines/alert_engine.py - Add proactive alert notification
+
+
+def send_proactive_alert(alert: Dict, chat_service=None):
+    """Send proactive alert via chat"""
+    try:
+        # Get users who should receive the alert
+        facility_id = alert.get("facility_id")
+        severity = alert.get("severity", "MEDIUM")
+
+        roles_to_notify = ["system_administrator", "national_administrator"]
+        if severity in ["HIGH", "CRITICAL"]:
+            roles_to_notify.extend(
+                [
+                    "national_executive",
+                    "facility_manager",
+                    "biomedical_engineer",
+                    "clinician",
+                ]
+            )
+        else:
+            roles_to_notify.extend(["facility_manager", "biomedical_engineer"])
+
+        # Get users
+        from app.services.notification_service import NotificationService
+
+        users = NotificationService.get_role_recipients(facility_id, roles_to_notify)
+
+        # Send chat notifications
+        for user in users:
+            try:
+                # Create conversation for user
+                from app.services.chat_service import ChatMemory
+
+                conversation_id = ChatMemory.create_conversation(
+                    user["id"], f"Alert: {alert.get('title', '')[:50]}"
+                )
+
+                # Create message content
+                message = f"""
+🚨 **PROACTIVE ALERT**
+
+**Severity:** {severity}
+**Title:** {alert.get('title')}
+**Equipment:** {alert.get('equipment_id', 'N/A')}
+**Facility:** {alert.get('facility_id')}
+
+**Message:** {alert.get('message')}
+
+**Recommendation:** {alert.get('recommendation', 'Please review and take action.')}
+
+*This is an automated proactive alert from MaishaWatch.*
+"""
+
+                # Save to conversation
+                ChatMemory.add_message(
+                    conversation_id, "system", message, "proactive_alert", alert
+                )
+
+                # Log the notification
+                logger.info(f"Proactive alert sent to {user['email']} via chat")
+
+            except Exception as e:
+                logger.error(
+                    f"Failed to send proactive chat alert to {user.get('email')}: {e}"
+                )
+
+        return {"sent": len(users)}
+
+    except Exception as e:
+        logger.error(f"Proactive alert failed: {e}")
+        return {"error": str(e)}
+
 
 def get_evaluation_status(equipment_id):
     """Get the current evaluation status for equipment"""

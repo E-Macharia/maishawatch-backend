@@ -1,9 +1,9 @@
 # app/main.py
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import CORS_ORIGINS
 from app.core.db import db
-from app.core.security import hash_password
+from app.core.security import hash_password, optional_user
 from app.api.routers import (
     auth, users, facilities, equipment, maintenance, alerts,
     audit, notifications, reports, chat, dashboard,predictions,failure
@@ -73,13 +73,27 @@ def seed_default_admin():
                 None,
                 1,
                 now,
-                None,
-                0
+                now,
+                1
             ))
             print(f"✅ Default admin created: {email} / {password}")
     except Exception as e:
         print(f"⚠️  Could not seed admin: {e}")
 
-@app.get('/health')
+@app.api_route('/', methods=['GET', 'HEAD'])
+def root():
+    return {
+        'message': 'Welcome to MaishaWatch API',
+        'status': 'online',
+        'version': '2.1.0',
+        'docs': '/docs',
+        'health': '/health'
+    }
+
+@app.api_route('/health', methods=['GET', 'HEAD'])
 def health():
     return {'status': 'ok', 'service': 'maishawatch-api', 'version': '2.1.0'}
+
+@app.get('/analytics/summary', tags=['Dashboard'])
+def analytics_summary(u=Depends(optional_user)):
+    return dashboard.dashboard_summary(u)

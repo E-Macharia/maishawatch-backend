@@ -10,7 +10,7 @@ from app.ml.predictor import (
     predict_failure_168h,
     predict_rul,
 )
-from app.core.security import current_user, require_roles
+from app.core.security import current_user, require_roles, optional_user
 from app.services.data_service import equipment, scope_filter, get_equipment_telemetry
 from app.core.db import db
 from app.core.audit import audit
@@ -108,7 +108,7 @@ def _get_rul_severity(rul_hours: float) -> Dict[str, str]:
 
 # --- Individual Failure Prediction Endpoints ---
 @router.post("/failure/24h", response_model=FailurePredictionResponse)
-def predict_failure_24h_endpoint(data: EquipmentFeatures, u=Depends(current_user)):
+def predict_failure_24h_endpoint(data: EquipmentFeatures, u=Depends(optional_user)):
     """Predict failure probability within the next 24 hours"""
     equipment_data = _check_equipment_access(data.equipment_id, u)
 
@@ -151,7 +151,7 @@ def predict_failure_24h_endpoint(data: EquipmentFeatures, u=Depends(current_user
 
 
 @router.post("/failure/72h", response_model=FailurePredictionResponse)
-def predict_failure_72h_endpoint(data: EquipmentFeatures, u=Depends(current_user)):
+def predict_failure_72h_endpoint(data: EquipmentFeatures, u=Depends(optional_user)):
     """Predict failure probability within the next 72 hours"""
     equipment_data = _check_equipment_access(data.equipment_id, u)
 
@@ -192,7 +192,7 @@ def predict_failure_72h_endpoint(data: EquipmentFeatures, u=Depends(current_user
 
 
 @router.post("/failure/168h", response_model=FailurePredictionResponse)
-def predict_failure_168h_endpoint(data: EquipmentFeatures, u=Depends(current_user)):
+def predict_failure_168h_endpoint(data: EquipmentFeatures, u=Depends(optional_user)):
     """Predict failure probability within the next 168 hours (7 days)"""
     equipment_data = _check_equipment_access(data.equipment_id, u)
 
@@ -234,7 +234,7 @@ def predict_failure_168h_endpoint(data: EquipmentFeatures, u=Depends(current_use
 
 # --- Combined Prediction Endpoint ---
 @router.post("/failure/all")
-def predict_all_failures(data: EquipmentFeatures, u=Depends(current_user)):
+def predict_all_failures(data: EquipmentFeatures, u=Depends(optional_user)):
     """Get failure predictions for all horizons (24h, 72h, 168h)"""
     equipment_data = _check_equipment_access(data.equipment_id, u)
 
@@ -297,7 +297,7 @@ def predict_all_failures(data: EquipmentFeatures, u=Depends(current_user)):
 
 # --- RUL Prediction Endpoint ---
 @router.post("/rul", response_model=RULPredictionResponse)
-def predict_rul_endpoint(data: RULRequest, u=Depends(current_user)):
+def predict_rul_endpoint(data: RULRequest, u=Depends(optional_user)):
     """Predict Remaining Useful Life (RUL) in hours"""
     equipment_data = _check_equipment_access(data.equipment_id, u)
 
@@ -527,7 +527,7 @@ def predict_batch_rul(
 
 # --- Get Risk Configuration ---
 @router.get("/config")
-def get_risk_configuration(u=Depends(current_user)):
+def get_risk_configuration(u=Depends(optional_user)):
     """Get current risk threshold configuration"""
     from app.ml.risk_config import get_risk_config
 
@@ -542,7 +542,7 @@ def get_risk_configuration(u=Depends(current_user)):
 def get_prediction_history(
     equipment_id: str,
     limit: int = Query(50, description="Number of records to return"),
-    u=Depends(current_user),
+    u=Depends(optional_user),
 ):
     """Get historical prediction results for equipment"""
     _check_equipment_access(equipment_id, u)
@@ -569,7 +569,7 @@ def get_prediction_history(
 
 # --- Health Check for ML Service ---
 @router.get("/health")
-def ml_health_check(u=Depends(current_user)):
+def ml_health_check(u=Depends(optional_user)):
     """Check ML service health and model availability"""
     models_status = {"24h": False, "72h": False, "168h": False, "rul": False}
 

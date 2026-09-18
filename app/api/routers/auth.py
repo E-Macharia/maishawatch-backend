@@ -4,7 +4,7 @@ from pydantic import BaseModel, EmailStr, Field
 from datetime import datetime, timezone, timedelta
 import secrets
 from app.core.db import db
-from app.core.security import verify_password, create_token, current_user, hash_password
+from app.core.security import verify_password, create_token, current_user, optional_user, hash_password
 from app.core.audit import audit
 from app.services.email_service import send_email
 from fastapi.security import OAuth2PasswordRequestForm
@@ -112,12 +112,12 @@ def login_oauth2(
 
     print(f"✅ Login successful for: {form_data.username}")
 
-    # Check if first time login
+    # Check if first time login (system administrators bypass OTP for direct OAuth2/Swagger access)
     is_first_time = (
         user_dict["last_login"] is None and user_dict.get("temp_password_used", 0) == 0
     )
 
-    if is_first_time:
+    if is_first_time and user_dict.get("role") != "system_administrator":
         # For first time login, return a special response
         # The OAuth2 flow expects a token, so we'll return an error with instructions
         raise HTTPException(
@@ -394,16 +394,16 @@ def change_password(x: PasswordChange, u=Depends(current_user)):
 
 
 @router.get("/me")
-def me(u=Depends(current_user)):
+def me(u=Depends(optional_user)):
     with db() as c:
         user = c.execute(
             "SELECT id, name, email, role, scope_type, scope_id, last_login, created_at FROM users WHERE id=?",
             (u["id"],),
         ).fetchone()
-    return dict(user)
+    return dict(user) if user else u
 
 
 @router.post("/logout")
-def logout(u=Depends(current_user)):
+def logout(u=Depends(optional_user)):
     audit(u, "LOGOUT", "auth", u["id"])
     return {"message": "Signed out"}

@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: maishawatch-backend
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt && python scripts/migrate.py
+    startCommand: uvicorn app.api.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: CORS_ORIGINS
+        value: "*"

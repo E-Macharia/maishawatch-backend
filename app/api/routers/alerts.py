@@ -4,7 +4,7 @@ from uuid import uuid4
 from fastapi import APIRouter, Depends, HTTPException, Query
 from typing import Optional, List
 from pydantic import BaseModel, Field
-from app.core.security import current_user, require_roles
+from app.core.security import current_user, require_roles, optional_user
 from app.core.audit import audit
 from app.core.db import db
 from app.services.data_service import equipment, scope_filter
@@ -163,7 +163,7 @@ def _transition(alert_id, status, u):
 
 @router.get('')
 def get_alerts(
-    u=Depends(current_user),
+    u=Depends(optional_user),
     status: Optional[str] = Query(None, description="Filter by status"),
     severity: Optional[str] = Query(None, description="Filter by severity"),
     source: Optional[str] = Query(None, description="Filter by source"),
@@ -211,7 +211,7 @@ def get_alerts(
 
 @router.get('/stats')
 def get_alert_stats(
-    u=Depends(current_user),
+    u=Depends(optional_user),
     facility_id: Optional[str] = Query(None, description="Filter by facility"),
     days: int = Query(30, description="Number of days to look back")
 ):
@@ -270,7 +270,7 @@ def get_alert_stats(
 def equipment_alerts(
     equipment_id: str,
     limit: int = Query(100, description="Limit results"),
-    u=Depends(current_user)
+    u=Depends(optional_user)
 ):
     """Get alerts for a specific equipment"""
     with db() as c:
@@ -284,7 +284,7 @@ def equipment_alerts(
     return rows
 
 @router.get('/{alert_id}')
-def get_alert(alert_id: str, u=Depends(current_user)):
+def get_alert(alert_id: str, u=Depends(optional_user)):
     """Get a single alert by ID"""
     with db() as c:
         row = c.execute('SELECT * FROM alerts WHERE id=?', (alert_id,)).fetchone()
@@ -486,7 +486,7 @@ def bulk_delete_alerts(
 def get_resolved_count(
     facility_id: Optional[str] = Query(None, description="Filter by facility"),
     days: int = Query(30, description="Number of days to look back"),
-    u=Depends(current_user)
+    u=Depends(optional_user)
 ):
     """Get count of resolved alerts in a time period"""
     with db() as c:

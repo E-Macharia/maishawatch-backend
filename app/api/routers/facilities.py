@@ -2,13 +2,13 @@ from fastapi import APIRouter,Depends,Query,HTTPException
 from pydantic import BaseModel
 from datetime import datetime,timezone
 from app.core.db import db
-from app.core.security import current_user,require_roles
+from app.core.security import current_user,require_roles,optional_user
 from app.core.audit import audit
 from app.services.data_service import facilities,equipment,scope_filter
 router=APIRouter(prefix='/facilities',tags=['Hospital Management'])
 class HospitalCreate(BaseModel): facility_id:str; facility_name:str; county:str; keph_level:str|None=None; status:str='ACTIVE'
 @router.get('')
-def get_facilities(name:str|None=None,county:str|None=None,equipment_type:str|None=None,status:str|None=None,keph_level:str|None=None,u=Depends(current_user)):
+def get_facilities(name:str|None=None,county:str|None=None,equipment_type:str|None=None,status:str|None=None,keph_level:str|None=None,u=Depends(optional_user)):
  rows=scope_filter(facilities(),u)
  if name: rows=[r for r in rows if name.lower() in str(r.get('facility_name', r.get('facility', ''))).lower()]
  if county: rows=[r for r in rows if str(r['county']).lower()==county.lower()]

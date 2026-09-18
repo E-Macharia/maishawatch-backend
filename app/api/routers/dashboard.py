@@ -1,7 +1,7 @@
 # app/api/routers/dashboard.py
 from fastapi import APIRouter, Depends
 from datetime import datetime, timezone, timedelta
-from app.core.security import current_user
+from app.core.security import current_user, optional_user
 from app.services.data_service import (
     equipment,
     failures,
@@ -15,7 +15,7 @@ router = APIRouter(prefix="/dashboard", tags=["Dashboard"])
 
 
 @router.get("/summary")
-def dashboard_summary(u=Depends(current_user)):
+def dashboard_summary(u=Depends(optional_user)):
     eq = scope_filter(equipment(), u)
     fs = scope_filter(facilities(), u)
 
