@@ -12,8 +12,8 @@ def get_admin_token():
     url = f"{BASE_URL}/auth/token"
     data = {
         "grant_type": "password",
-        "username": "calebmunyeks002@gmail.com",
-        "password": "Admin@4321",
+        "username": "machariaevans636@gmail.com",
+        "password": "Admin@123",
     }
     headers = {"Content-Type": "application/x-www-form-urlencoded"}
 
