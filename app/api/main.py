@@ -44,39 +44,59 @@ for router in routers:
 
 @app.on_event('startup')
 def seed_default_admin():
-    """Create default admin user if no users exist"""
+    """Ensure default admin user (Evans Macharia) exists and is active"""
     try:
         with db() as c:
-            # Check if any users exist
-            existing = c.execute('SELECT 1 FROM users LIMIT 1').fetchone()
-            if existing:
-                print("✅ Users already exist, skipping seed")
-                return
-            
             import os
             from datetime import datetime, timezone
             now = datetime.now(timezone.utc).isoformat()
-            email = os.getenv('DEFAULT_ADMIN_EMAIL', 'calebmunyeks002@gmail.com')
-            password = os.getenv('DEFAULT_ADMIN_PASSWORD', 'Admin@123')
-            
-            c.execute('''
-                INSERT INTO users 
-                (id, name, email, password_hash, role, scope_type, scope_id, active, created_at, last_login, temp_password_used)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            ''', (
-                'USR-NATIONAL-ADMIN',
-                'System Administrator',
-                email,
-                hash_password(password),
-                'system_administrator',
-                'national',
-                None,
-                1,
-                now,
-                now,
-                1
-            ))
-            print(f"✅ Default admin created: {email} / {password}")
+            email = os.getenv('DEFAULT_ADMIN_EMAIL', 'machariaevans636@gmail.com').strip()
+            password = os.getenv('DEFAULT_ADMIN_PASSWORD', 'Admin@123').strip()
+
+            # Check if this admin email already exists
+            admin_user = c.execute(
+                'SELECT * FROM users WHERE lower(email)=lower(?)', (email,)
+            ).fetchone()
+
+            if not admin_user:
+                # Check if old admin exists to update, or create new record
+                old_admin = c.execute(
+                    "SELECT * FROM users WHERE id='USR-NATIONAL-ADMIN' OR lower(email)='calebmunyeks002@gmail.com'"
+                ).fetchone()
+
+                if old_admin:
+                    c.execute('''
+                        UPDATE users
+                        SET email=?, name=?, password_hash=?, active=1, temp_password_used=1, role='system_administrator', scope_type='national'
+                        WHERE id=?
+                    ''', (email, 'Evans Macharia', hash_password(password), old_admin['id']))
+                    print(f"✅ Admin user updated to: {email}")
+                else:
+                    c.execute('''
+                        INSERT INTO users 
+                        (id, name, email, password_hash, role, scope_type, scope_id, active, created_at, last_login, temp_password_used)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    ''', (
+                        'USR-NATIONAL-ADMIN',
+                        'Evans Macharia',
+                        email,
+                        hash_password(password),
+                        'system_administrator',
+                        'national',
+                        None,
+                        1,
+                        now,
+                        now,
+                        1
+                    ))
+                    print(f"✅ Default admin created: {email} / {password}")
+            else:
+                # Ensure active and updated role
+                c.execute(
+                    "UPDATE users SET active=1, role='system_administrator', scope_type='national' WHERE lower(email)=lower(?)",
+                    (email,)
+                )
+                print(f"✅ National admin {email} verified active.")
     except Exception as e:
         print(f"⚠️  Could not seed admin: {e}")
 

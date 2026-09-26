@@ -15,7 +15,7 @@ API documentation: `http://127.0.0.1:8000/docs`
 
 Configured through environment variables:
 
-- `DEFAULT_ADMIN_EMAIL` (default: `calebmunyeks002@gmail.com`)
+- `DEFAULT_ADMIN_EMAIL` (default: `machariaevans636@gmail.com`)
 - `DEFAULT_ADMIN_PASSWORD` (default: `Admin@123`)
 
 Change these before deployment.

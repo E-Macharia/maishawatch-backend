@@ -27,7 +27,7 @@ AI functioned as an advanced full-stack pair programmer, compressing days of com
    - Resolved Render free-tier cold-start latency issues and registered route aliases (`/analytics/summary` mirroring `/dashboard/summary`).
 
 2. **Architectural Security Refactoring (Saved ~4 hours):**
-   - Engineered an `optional_user` dependency pattern in `app/core/security.py`. This safely defaults unauthenticated dashboard interactions and the chatbot to the National System Administrator (`calebmunyeks002@gmail.com`), allowing public evaluation and monitoring features to function without failing role checks or throwing authentication errors.
+   - Engineered an `optional_user` dependency pattern in `app/core/security.py`. This safely defaults unauthenticated dashboard interactions and the chatbot to the National System Administrator (`machariaevans636@gmail.com`), allowing public evaluation and monitoring features to function without failing role checks or throwing authentication errors.
 
 3. **Multi-Model LLM Integration (Saved ~6 hours):**
    - Built an adaptable `LLMService` supporting Groq API (`llama-3.3-70b-versatile` and compound models) with automatic failover, conversational history persistence, and live injection of Kenya healthcare telemetry context (150 equipment assets across 129 facilities).

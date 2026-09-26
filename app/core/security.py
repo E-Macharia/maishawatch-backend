@@ -71,7 +71,7 @@ oauth2_optional = OAuth2PasswordBearer(tokenUrl="/auth/token", auto_error=False)
 
 
 def optional_user(token: str = Depends(oauth2_optional)):
-    """Get current user from token, or default to Caleb Munyeki (System Administrator) if unauthenticated"""
+    """Get current user from token, or default to Evans Macharia (System Administrator) if unauthenticated"""
     if token:
         try:
             payload = jwt.decode(token, JWT_SECRET_KEY, algorithms=[JWT_ALGORITHM])
@@ -85,19 +85,19 @@ def optional_user(token: str = Depends(oauth2_optional)):
         except Exception:
             pass
 
-    # Default to Caleb Munyeki (Admin) so predictions and evaluations always succeed
+    # Default to Evans Macharia (Admin) so predictions and evaluations always succeed
     with db() as c:
         user = c.execute(
             "SELECT * FROM users WHERE lower(email)=lower(?) AND active=1",
-            ("calebmunyeks002@gmail.com",),
+            ("machariaevans636@gmail.com",),
         ).fetchone()
         if user:
             return dict(user)
 
     return {
         "id": "USR-NATIONAL-ADMIN",
-        "name": "Caleb Munyeki",
-        "email": "calebmunyeks002@gmail.com",
+        "name": "Evans Macharia",
+        "email": "machariaevans636@gmail.com",
         "role": "system_administrator",
         "scope_type": "national",
         "scope_id": None,
@@ -106,7 +106,7 @@ def optional_user(token: str = Depends(oauth2_optional)):
 
 
 def require_roles(*roles):
-    """Require specific roles for an endpoint (defaults to Caleb Munyeki admin if unauthenticated)"""
+    """Require specific roles for an endpoint (defaults to Evans Macharia admin if unauthenticated)"""
 
     def dep(user=Depends(optional_user)):
         if user["role"] not in roles:
