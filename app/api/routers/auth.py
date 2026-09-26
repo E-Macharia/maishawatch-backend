@@ -6,7 +6,7 @@ import secrets
 from app.core.db import db
 from app.core.security import verify_password, create_token, current_user, optional_user, hash_password
 from app.core.audit import audit
-from app.services.email_service import send_email
+from app.services.email_service import send_email, send_otp_email
 from fastapi.security import OAuth2PasswordRequestForm
 router = APIRouter(prefix="/auth", tags=["Authentication"])
 
@@ -169,25 +169,14 @@ def login(x: Login, background_tasks: BackgroundTasks):
     purpose = "first_time" if is_first_time else "login"
     store_otp(x.email, otp, purpose)
 
-    body = f"""
-    MaishaWatch {purpose.replace('_', ' ').title()} OTP
-    
-    Your OTP is: {otp}
-    
-    This OTP will expire in 10 minutes.
-    
-    If you did not request this, please ignore this email.
-    
-    MaishaWatch Team
-    """
     background_tasks.add_task(
-        send_email,
+        send_otp_email,
         x.email,
-        f'MaishaWatch - {purpose.replace("_", " ").title()} OTP',
-        body,
+        otp,
+        purpose,
     )
 
-    print(f"📧 OTP sent to {x.email}: {otp} (for debugging)")
+    print(f"📧 OTP dispatched via email to {x.email}")
 
     return {
         "requires_otp": True,
@@ -320,21 +309,8 @@ def forgot_password(x: ForgotPassword, background_tasks: BackgroundTasks):
     otp = generate_otp()
     store_otp(x.email, otp, "password_reset")
 
-    body = f"""
-    MaishaWatch - Password Reset
-    
-    You requested to reset your password. Please use the following OTP:
-    
-    OTP: {otp}
-    
-    This OTP will expire in 10 minutes.
-    
-    If you did not request this, please ignore this email.
-    
-    MaishaWatch Team
-    """
     background_tasks.add_task(
-        send_email, x.email, "MaishaWatch - Password Reset OTP", body
+        send_otp_email, x.email, otp, "password_reset"
     )
 
     return {"message": "OTP sent to your email", "email": x.email}
