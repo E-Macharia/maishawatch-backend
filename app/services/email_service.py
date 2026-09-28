@@ -44,9 +44,8 @@ def send_email(to: str, subject: str, body: str, html_body: str = None):
         msg.set_content(body)
 
     try:
-        logger.info(f"Sending email to {to}: {subject}")
-
-        with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=30) as server:
+        print(f"📧 Connecting to SMTP {SMTP_HOST}:{SMTP_PORT} to send email to {to}...", flush=True)
+        with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=15) as server:
             server.ehlo()
             if SMTP_USE_TLS:
                 server.starttls()
@@ -54,19 +53,24 @@ def send_email(to: str, subject: str, body: str, html_body: str = None):
             server.login(SMTP_USERNAME, SMTP_PASSWORD)
             server.send_message(msg)
 
+        print(f"✅ Email successfully sent via SMTP to {to}", flush=True)
         logger.info(f"✅ Email sent to {to}")
         return True, "sent"
 
     except smtplib.SMTPAuthenticationError as e:
+        print(f"❌ SMTP Authentication Failed for {to}: {e}", flush=True)
         logger.error(f"SMTP authentication failed: {e}")
         return False, f"SMTP authentication failed: {e}"
     except smtplib.SMTPException as e:
+        print(f"❌ SMTP Error for {to}: {e}", flush=True)
         logger.error(f"SMTP error: {e}")
         return False, f"SMTP error: {e}"
     except OSError as e:
+        print(f"❌ SMTP Connection Error (Render outbound port block or timeout) for {to}: {e}", flush=True)
         logger.error(f"SMTP connection error: {e}")
         return False, f"SMTP connection error: {e}"
     except Exception as e:
+        print(f"❌ Email Delivery Error for {to}: {e}", flush=True)
         logger.error(f"Email delivery error: {e}")
         return False, f"Email delivery error: {e}"
 
