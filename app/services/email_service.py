@@ -1,5 +1,6 @@
-# app/services/email_service.py
+import os
 import smtplib
+import httpx
 from email.message import EmailMessage
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -16,8 +17,56 @@ import logging
 logger = logging.getLogger(__name__)
 
 
+def send_via_resend(to: str, subject: str, body: str, html_body: str = None):
+    """Send an email using Resend HTTP API (bypasses Render SMTP port blocking)"""
+    resend_api_key = os.getenv("RESEND_API_KEY")
+    if not resend_api_key:
+        return False, "RESEND_API_KEY not configured"
+
+    sender = os.getenv("RESEND_FROM", "MaishaWatch <onboarding@resend.dev>")
+    payload = {
+        "from": sender,
+        "to": [to],
+        "subject": subject,
+    }
+    if html_body:
+        payload["html"] = html_body
+        payload["text"] = body
+    else:
+        payload["text"] = body
+
+    try:
+        print(f"🚀 Sending email via Resend HTTPS API to {to}...", flush=True)
+        response = httpx.post(
+            "https://api.resend.com/emails",
+            headers={
+                "Authorization": f"Bearer {resend_api_key.strip()}",
+                "Content-Type": "application/json",
+            },
+            json=payload,
+            timeout=10.0,
+        )
+        if response.status_code in (200, 201):
+            print(f"✅ Email successfully delivered via Resend API to {to}", flush=True)
+            return True, "sent"
+        else:
+            print(f"❌ Resend API error ({response.status_code}): {response.text}", flush=True)
+            return False, f"Resend API error: {response.text}"
+    except Exception as e:
+        print(f"❌ Resend API exception: {e}", flush=True)
+        return False, str(e)
+
+
 def send_email(to: str, subject: str, body: str, html_body: str = None):
-    """Send an email using SMTP configuration"""
+    """Send an email using Resend HTTP API if configured, or SMTP fallback"""
+    # 1. Try Resend HTTP API first (bypasses Render Free Tier port 587 block)
+    if os.getenv("RESEND_API_KEY"):
+        ok, res = send_via_resend(to, subject, body, html_body)
+        if ok:
+            return True, res
+        print("⚠️ Resend delivery failed, falling back to SMTP...", flush=True)
+
+    # 2. SMTP fallback
     if not SMTP_HOST or not SMTP_USERNAME or not SMTP_PASSWORD:
         logger.warning("SMTP not fully configured")
         return False, "SMTP is not fully configured"
