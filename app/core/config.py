@@ -3,7 +3,7 @@ from app.core.paths import PROJECT_ROOT, DATA_DIR, STORAGE_DIR, DB_FILE
 
 JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY', 'change-this-in-production')
 JWT_ALGORITHM = 'HS256'
-JWT_EXPIRE_MINUTES = int(os.getenv('JWT_EXPIRE_MINUTES', '480'))
+JWT_EXPIRE_MINUTES = int(os.getenv('JWT_EXPIRE_MINUTES', '30'))
 CORS_ORIGINS = [
     x.strip()
     for x in os.getenv(
